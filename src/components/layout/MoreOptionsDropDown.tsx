@@ -20,7 +20,7 @@ export function MoreOptionsDropdown() {
 
   return (
     <DropdownMenu open={open} onOpenChange={setOpen}>
-      <DropdownMenuTrigger className="p-2 rounded-xl flex gap-2 w-44 justify-center shadow-xl border border-gray-600 items-center">
+      <DropdownMenuTrigger className="p-2 rounded-xl flex gap-2 w-44 justify-center shadow-xl border  border-gray-600 items-center">
         {tMoreOptions("moreOptions")}
         <ChevronDown
           className={`transition-transform duration-300 ${
@@ -31,7 +31,7 @@ export function MoreOptionsDropdown() {
 
       <DropdownMenuContent
         align="start"
-        className="w-44 p-2 dark:text-white shadow-xl border-none"
+        className="w-44 p-2 dark:text-white shadow-xl bg-bg-primary dark:bg-bg-dark border-none"
       >
         <DropdownMenuItem className="w-full">
           <div className="flex flex-col text-left items-start gap-1 w-full">
