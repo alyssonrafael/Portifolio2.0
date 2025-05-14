@@ -1,16 +1,17 @@
 {
-  "Nav":{
+  "Nav": {
+    "navigation": "Navegação",
     "home": "Inicio",
     "about": "Sobre",
     "tecnologies": "Tecnologias",
     "projects": "Projetos",
     "contact": "Contato"
   },
-  "MoreOptions":{
+  "MoreOptions": {
     "moreOptions": "Mais Opções",
     "language": "Idioma"
   },
-  "Theme":{
+  "Theme": {
     "dark": "Escuro",
     "ligth": "Claro",
     "system": "Sistema",

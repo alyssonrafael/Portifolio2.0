@@ -109,7 +109,9 @@ export function Navbar() {
             >
               <div className="flex flex-col h-full">
                 <DrawerHeader className="border-b flex flex-row items-center justify-between px-4 py-4">
-                  <DrawerTitle className="text-2xl">Navegação</DrawerTitle>
+                  <DrawerTitle className="text-2xl">
+                    {t("navigation")}
+                  </DrawerTitle>
                   <Button
                     onClick={() => setIsDrawerOpen(false)}
                     variant="ghost"
