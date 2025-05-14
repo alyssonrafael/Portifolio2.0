@@ -1,0 +1,19 @@
+{
+  "Nav":{
+    "home": "Inicio",
+    "about": "Sobre",
+    "tecnologies": "Tecnologias",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "MoreOptions":{
+    "moreOptions": "Mais Opções",
+    "language": "Idioma"
+  },
+  "Theme":{
+    "dark": "Escuro",
+    "ligth": "Claro",
+    "system": "Sistema",
+    "theme": "Tema"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "Nav":{
+    "home": "Home",
+    "about": "About",
+    "tecnologies": "Tecnologies",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "MoreOptions":{
+    "moreOptions": "More Options",
+    "language": "Language"
+  },
+  "Theme":{
+    "dark": "Dark",
+    "ligth": "Ligth",
+    "system": "System",
+    "theme": "Theme"
+  }
+}
