@@ -1,5 +1,5 @@
 {
-  "Nav":{
+  "Nav": {
     "navigation": "Navigation",
     "home": "Home",
     "about": "About",
@@ -7,14 +7,29 @@
     "projects": "Projects",
     "contact": "Contact"
   },
-  "MoreOptions":{
+  "MoreOptions": {
     "moreOptions": "More Options",
     "language": "Language"
   },
-  "Theme":{
+  "Theme": {
     "dark": "Dark",
     "ligth": "Ligth",
     "system": "System",
     "theme": "Theme"
+  },
+  "Home": {
+    "greeting": "Hi there, I'm Alysson,",
+    "tagline": "Navigating the Imagination and challenges",
+    "roles": {
+      "webDeveloper": "Web Developer",
+      "fullStackDeveloper": "Full-stack Developer",
+      "mobileDeveloper": "Mobile Developer",
+      "amateurDesigner": "Amateur Designer"
+    },
+    "work": {
+      "title": "My work",
+      "description": "A programmer passionate about commitment, he sees code as his purest form of expression. Each project is a new challenge to be explored.",
+      "link": "Navigate to projects"
+    }
   }
 }

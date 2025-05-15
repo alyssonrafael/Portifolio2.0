@@ -16,5 +16,20 @@
     "ligth": "Claro",
     "system": "Sistema",
     "theme": "Tema"
+  },
+  "Home": {
+    "greeting": "Olá, eu sou Alysson,",
+    "tagline": "Navegando pela imaginação e desafios",
+    "roles": {
+      "webDeveloper": "Desenvolvedor Web",
+      "fullStackDeveloper": "Desenvolvedor Full-stack",
+      "mobileDeveloper": "Desenvolvedor Mobile",
+      "amateurDesigner": "Designer amador"
+    },
+    "work": {
+      "title": "Meu trabalho",
+      "description": "Um programador apaixonado por codificação, vê no código sua forma mais pura de expressão. Cada projeto é um novo desafio a ser explorado.",
+      "link": "Ver projetos"
+    }
   }
 }
