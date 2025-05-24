@@ -47,7 +47,7 @@ export default function Section1() {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col md:flex-row justify-center gap-12 py-12 md:py-24 px-4 text-center lg:text-left "
+      className="min-h-screen flex flex-col md:flex-row justify-center lg:items-center gap-12 py-16 md:py-24 px-4 text-center lg:text-left "
     >
       <div className="flex-1 space-y-8">
         {/* Título com typewriter effect */}

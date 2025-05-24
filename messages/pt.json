@@ -31,5 +31,23 @@
       "description": "Um programador apaixonado por codificação, vê no código sua forma mais pura de expressão. Cada projeto é um novo desafio a ser explorado.",
       "link": "Ver projetos"
     }
+  },
+  "About": {
+    "title": "Quem sou eu",
+    "description": "Conheça mais sobre minhas habilidades e experiências",
+    "cards": {
+      "who": {
+        "title": "Quem sou",
+        "content": "Me chamo Alysson Rafael, um entusiasta da tecnologia que está sempre em busca de novos desafios e aprendizados. Sou formado em Ciência da Computação e atualmente atuo como desenvolvedor fullstack, unindo paixão por código com constante evolução profissional."
+      },
+      "experience": {
+        "title": "Minhas experiências",
+        "content": "Atuo na área de tecnologia há alguns anos, com experiências como freelancer e no desenvolvimento de projetos pessoais que busco sempre aprimorar. Hoje trabalho como desenvolvedor fullstack júnior, em constante evolução e aprendizado."
+      },
+      "skills": {
+        "title": "O que posso fazer",
+        "content": "Posso desenvolver desde landing pages simples até sistemas completos de gerenciamento de estoque, vendas e até aplicativos mobile um pouco mais complexos, sempre buscando entregar soluções com a melhor qualidade possível."
+      }
+    }
   }
 }

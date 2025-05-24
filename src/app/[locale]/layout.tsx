@@ -8,6 +8,7 @@ import { Roboto } from "next/font/google";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { Navbar } from "@/components/layout/Navbar";
+import { MobileProvider } from "@/contexts/MobileContext";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -40,10 +41,12 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider>
           <ThemeProvider>
-            <div className="bg-bg-primary dark:bg-bg-dark text-text-primary dark:text-text-dark transition-colors duration-300 ">
-              <Navbar />
-              {children}
-            </div>
+            <MobileProvider>
+              <div className="bg-bg-primary dark:bg-bg-dark text-text-primary dark:text-text-dark transition-colors duration-300 ">
+                <Navbar />
+                {children}
+              </div>
+            </MobileProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

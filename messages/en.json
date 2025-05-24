@@ -31,5 +31,23 @@
       "description": "A programmer passionate about commitment, he sees code as his purest form of expression. Each project is a new challenge to be explored.",
       "link": "Navigate to projects"
     }
+  },
+  "About": {
+    "title": "Who I Am",
+    "description": "Learn more about my skills and experiences",
+    "cards": {
+      "who": {
+        "title": "Who I Am",
+        "content": "My name is Alysson Rafael, a technology enthusiast who is always looking for new challenges and learning opportunities. I hold a degree in Computer Science and currently work as a fullstack developer, combining a passion for code with constant professional growth."
+      },
+      "experience": {
+        "title": "My Experiences",
+        "content": "I’ve been working in the tech field for several years, with experience as a freelancer and through personal projects that I constantly strive to improve. Today, I work as a junior fullstack developer, always focused on learning and evolving."
+      },
+      "skills": {
+        "title": "What I Can Do",
+        "content": "I can develop anything from simple landing pages to complete inventory and sales management systems, as well as more complex mobile apps — always aiming to deliver the best quality possible."
+      }
+    }
   }
 }
