@@ -3,7 +3,6 @@ import { useMobile } from "@/contexts/MobileContext";
 import { motion } from "framer-motion";
 import { BriefcaseBusiness, PencilRuler, UserRound } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
 
 // Variantes de animação (desktop)
 const cardVariants = {
