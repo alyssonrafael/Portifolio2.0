@@ -58,7 +58,7 @@ export default function Section1() {
             <span className="animate-pulse">|</span>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl mt-4 lg:max-w-2xl">
-            "{t("tagline")}"
+            {t("tagline")}
           </p>
         </div>
 

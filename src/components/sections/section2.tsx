@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 
 // Variantes de animação (desktop)
 const cardVariants = {
-  offscreen: (i: number) => ({
+  offscreen: () => ({
     opacity: 0,
     y: 50,
     scale: 0.95, // Leve zoom out
@@ -26,7 +26,7 @@ const cardVariants = {
 
 // Variantes para mobile
 const mobileCardVariants = {
-  offscreen: (i: number) => ({
+  offscreen: () => ({
     opacity: 0,
     y: 40,
     scale: 0.95,
