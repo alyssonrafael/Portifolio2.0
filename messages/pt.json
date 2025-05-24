@@ -49,5 +49,10 @@
         "content": "Posso desenvolver desde landing pages simples até sistemas completos de gerenciamento de estoque, vendas e até aplicativos mobile um pouco mais complexos, sempre buscando entregar soluções com a melhor qualidade possível."
       }
     }
+  },
+  "Tecnologies": {
+    "title": "Tecnologias e Ferramentas",
+    "description": "Quais tecnologias e ferramentas eu domino?",
+    "development": "Desenvolvimento"
   }
 }

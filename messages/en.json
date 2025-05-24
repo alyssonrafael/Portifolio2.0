@@ -49,5 +49,10 @@
         "content": "I can develop anything from simple landing pages to complete inventory and sales management systems, as well as more complex mobile apps — always aiming to deliver the best quality possible."
       }
     }
+  },
+  "Tecnologies": {
+    "title": "Technologies & Tools",
+    "description": "What technologies and tools do I master?",
+    "development": "Development"
   }
 }
