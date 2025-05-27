@@ -19,12 +19,6 @@ export default function Section4() {
         >
           Acessar Projeto 1
         </Link>
-        <Link
-          href={`/${locale}/projects/Projeto-2`}
-          className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
-        >
-          Acessar Projeto 2
-        </Link>
       </div>
     </section>
   );

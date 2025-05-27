@@ -7,6 +7,13 @@
     "projects": "Projetos",
     "contact": "Contato"
   },
+  "NavProjects": {
+    "navigation": "Navegação",
+    "about": "Sobre",
+    "tecnologies": "Tecnologias",
+    "gallery": "Galeria",
+    "backToHome": "Voltar para o Inicio"
+  },
   "MoreOptions": {
     "moreOptions": "Mais Opções",
     "language": "Idioma"
