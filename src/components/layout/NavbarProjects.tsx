@@ -23,7 +23,7 @@ export function NavbarProjects() {
   const [activeSection, setActiveSection] = useState("");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const sections = ["about", "tecnologies", "gallery"];
+  const sections = ["about", "technologies", "gallery"];
 
   const handleScroll = () => {
     const sectionOffsets = sections

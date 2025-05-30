@@ -21,7 +21,7 @@ export function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const sections = ["home", "about", "tecnologies", "projects", "contact"];
+  const sections = ["home", "about", "technologies", "projects", "contact"];
 
   const handleScroll = () => {
     const sectionOffsets = sections

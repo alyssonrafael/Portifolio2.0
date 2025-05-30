@@ -3,14 +3,14 @@
     "navigation": "Navegação",
     "home": "Inicio",
     "about": "Sobre",
-    "tecnologies": "Tecnologias",
+    "technologies": "Tecnologias",
     "projects": "Projetos",
     "contact": "Contato"
   },
   "NavProjects": {
     "navigation": "Navegação",
     "about": "Sobre",
-    "tecnologies": "Tecnologias",
+    "technologies": "Tecnologias",
     "gallery": "Galeria",
     "backToHome": "Voltar para o Inicio"
   },
@@ -57,9 +57,12 @@
       }
     }
   },
-  "Tecnologies": {
+  "Technologies": {
     "title": "Tecnologias e Ferramentas",
     "description": "Quais tecnologias e ferramentas eu domino?",
     "development": "Desenvolvimento"
+  },
+  "Projects":{
+    "my projects":"Meus Projetos"
   }
 }

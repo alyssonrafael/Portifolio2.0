@@ -1,3 +1,5 @@
+"use client"
+
 import { useMobile } from "@/contexts/MobileContext";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";

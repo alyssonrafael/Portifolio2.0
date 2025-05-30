@@ -3,14 +3,14 @@
     "navigation": "Navigation",
     "home": "Home",
     "about": "About",
-    "tecnologies": "Tecnologies",
+    "technologies": "Technologies",
     "projects": "Projects",
     "contact": "Contact"
   },
   "NavProjects": {
     "navigation": "Navigation",
     "about": "About",
-    "tecnologies": "Tecnologies",
+    "technologies": "Technologies",
     "gallery": "Gallery",
     "backToHome": "Back to Home"
   },
@@ -57,9 +57,12 @@
       }
     }
   },
-  "Tecnologies": {
+  "Technologies": {
     "title": "Technologies & Tools",
     "description": "What technologies and tools do I master?",
     "development": "Development"
+  },
+  "Projects":{
+    "my projects":"My Projects"
   }
 }
