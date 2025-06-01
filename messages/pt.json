@@ -62,7 +62,26 @@
     "description": "Quais tecnologias e ferramentas eu domino?",
     "development": "Desenvolvimento"
   },
-  "Projects":{
-    "my projects":"Meus Projetos"
+  "Projects": {
+    "myProjects": "Meus Projetos",
+    "description": "Aqui você pode ver alguns dos projetos que desenvolvi",
+    "learnMore": "Saiba mais sobre o projeto é so clicar em algum deles!",
+    "status": {
+      "hosted": "Hospedado",
+      "production": "Em produção",
+      "notHosted": "Não hospedado",
+      "documentationOnly": "Somente documentado"
+    },
+    "project1": {
+      "name": "Projeto 1",
+      "about": "Esse é o projeto 1",
+      "description": "Descrição do projeto",
+      "techDescription": "Descrição das tecnologias utilizadas"
+    },
+    "project2": {
+      "name": "Projeto 2",
+      "about": "Esse é o projeto 2",
+      "description": "Descrição do projeto "
+    }
   }
 }

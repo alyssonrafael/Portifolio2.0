@@ -62,7 +62,26 @@
     "description": "What technologies and tools do I master?",
     "development": "Development"
   },
-  "Projects":{
-    "my projects":"My Projects"
+  "Projects": {
+    "myProjects": "My Projects",
+    "description": "Here you can see some of the projects I have developed",
+    "learnMore": "Find out more about the project by clicking on any of them!",
+    "status": {
+      "hosted": "Hosted",
+      "production": "In production",
+      "notHosted": "Not hosted",
+      "documentationOnly": "Documentation only"
+    },
+    "project1": {
+      "name": "Project 1",
+      "about": "This is project 1",
+      "description": "Project description",
+      "techDescription": "Description of the technologies used"
+    },
+    "project2": {
+      "name": "Project 2",
+      "about": "This is project 2",
+      "description": "Project description"
+    }
   }
 }
