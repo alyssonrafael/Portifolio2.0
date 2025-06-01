@@ -1,5 +1,6 @@
 import { Project } from "@/data/projects";
 import TechItem from "../TechItem";
+import { useTranslations } from "next-intl";
 
 export default function ProjetoPageContent({
   name,
@@ -8,7 +9,9 @@ export default function ProjetoPageContent({
   techDescription,
   technologies,
   gallery,
+  gitHubLink,
 }: Project) {
+  const t = useTranslations("Projects");
   //placeholder da pagina de projetos
   return (
     <>
@@ -16,10 +19,12 @@ export default function ProjetoPageContent({
         id="about"
         className="py-24 min-h-screen flex flex-col items-center"
       >
-        <h1 className="text-4xl font-bold mb-4">{name}</h1>
-        <p>{about}</p>
-        <p>{description}</p>
-        <p>{techDescription}</p>
+        <h1 className="text-4xl font-bold mb-4">{t(name)}</h1>
+        <p>{t(about)}</p>
+        <p>{t(description)}</p>
+        {/*se tiver ele mpuxa da tradução se nao tiver nao faz isso e segue*/}
+        {techDescription && <p>{t(techDescription)}</p>}
+        <p>{gitHubLink}</p>
       </section>
 
       <section

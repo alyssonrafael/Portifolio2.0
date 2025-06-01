@@ -10,40 +10,40 @@ export interface Project {
   techDescription?: string;
   technologies: TechItemProps[];
   gallery: string[];
+  status: "hosted" | "production" | "notHosted" | "documentationOnly";
+  gitHubLink: string; // /nome do projeto no github
 }
 //meus projetos um array de Project
 export const projects: Project[] = [
   //ex projeto 1
   {
     slug: "Projeto-1",
-    name: "Projeto 1",
-    about: "Esse é o projeto 1",
-    description: "descrição do projeto",
-    techDescription: "descrição das techs",
+    name: "project1.name", //passado para acessar o objeto na tradução
+    about: "project1.about",
+    description: "project1.description",
+    techDescription: "project1.techDescription",
     technologies: [
       { label: "HTML", icon: <SiHtml5 />, color: "orange" },
       { label: "React", icon: <SiReact />, color: "blue" },
       { label: "TypeScript", icon: <SiTypescript />, color: "blue" },
     ] as TechItemProps[],
-    gallery: [
-      "/images/projeto-1/1.png",
-      "/images/projeto-1/2.png",
-    ],
+    gallery: ["/assetsProjects/project1/capa.png"],
+    status: "hosted",
+    gitHubLink: "/projeto1",
   },
   //ex projeto 2
   {
     slug: "Projeto-2",
-    name: "Projeto 2",
-    about: "Esse é o projeto 2",
-    description: "descrição do projeto",
+    name: "project2.name",
+    about: "project2.about",
+    description: "project2.description",
     technologies: [
       { label: "HTML", icon: <SiHtml5 />, color: "orange" },
       { label: "React", icon: <SiReact />, color: "blue" },
       { label: "TypeScript", icon: <SiTypescript />, color: "blue" },
     ] as TechItemProps[],
-    gallery: [
-      "/images/projeto-2/1.png",
-      "/images/projeto-2/2.png",
-    ],
+    gallery: ["/assetsProjects/project1/capa.png"],
+    status: "notHosted",
+    gitHubLink: "/projeto2",
   },
 ];
