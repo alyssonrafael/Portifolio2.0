@@ -7,7 +7,12 @@ import { useTranslations } from "next-intl";
 //omite alguns tipos que não serao usados
 type PartialProjectCardProps = Omit<
   Project,
-  "about" | "techDescription" | "technologies" | "gitHubLink"
+  | "about"
+  | "techDescription"
+  | "technologies"
+  | "gitHubLink"
+  | "projectType"
+  | "projectLink"
 >;
 
 export default function ProjetoCard({
@@ -19,7 +24,7 @@ export default function ProjetoCard({
 }: PartialProjectCardProps) {
   const t = useTranslations("Projects");
 
-  // cria um car clicavel com o link da pagina do projeto sua imagem e algumas informaçoes
+  // cria um card clicavel com o link da pagina do projeto sua imagem e algumas informaçoes
   return (
     <Link href={`/projects/${slug}`} className="block">
       <div className="w-full max-w-md bg-bg-primary dark:bg-bg-dark hover:bg-white/30 dark:hover:bg-white/5 rounded-xl shadow-lg  overflow-hidden transition hover:scale-[1.02] duration-300">
@@ -37,7 +42,7 @@ export default function ProjetoCard({
           <h2 className="text-xl font-bold text-text-primary dark:text-text-dark">
             {t(name)}
           </h2>
-          <p className="text-sm text-text-primary/40 dark:text-text-dark/40">
+          <p className="text-sm text-text-primary/40 dark:text-text-dark/40 h-10 line-clamp-2">
             {t(description)}
           </p>
 

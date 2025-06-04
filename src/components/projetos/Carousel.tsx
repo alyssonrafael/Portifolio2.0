@@ -17,7 +17,7 @@ export default function Carousel({
   slidesToShow = 3,
   autoplaySpeed = 5000,
 }: CarouselProps) {
-  // configuraçoes do carosel 
+  // configuraçoes do carosel
   const settings = {
     dots: true,
     infinite: true,
@@ -57,6 +57,11 @@ export default function Carousel({
       </Slider>
       {/* estilos personalizados para o carosel */}
       <style jsx global>{`
+        .slick-prev:before,
+        .slick-next:before {
+          color: #999;
+          font-size: 24px;
+        }
         .slick-dots li button:before {
           font-size: 12px;
           color: #999;
