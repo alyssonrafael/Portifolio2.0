@@ -10,6 +10,8 @@ export default function ProjetoPageContent({
   technologies,
   gallery,
   gitHubLink,
+  projectType,
+  projectLink,
 }: Project) {
   const t = useTranslations("Projects");
   //placeholder da pagina de projetos
@@ -24,7 +26,8 @@ export default function ProjetoPageContent({
         <p>{t(description)}</p>
         {/*se tiver ele mpuxa da tradução se nao tiver nao faz isso e segue*/}
         {techDescription && <p>{t(techDescription)}</p>}
-        <p>{gitHubLink}</p>
+        {gitHubLink && <p> {gitHubLink} </p>}
+        {projectLink && <p> {projectLink} </p>}
       </section>
 
       <section
@@ -32,9 +35,11 @@ export default function ProjetoPageContent({
         className="py-24 min-h-screen flex flex-col items-center"
       >
         <h2 className="text-2xl font-semibold mb-2">Tecnologias</h2>
-        {technologies.map((tech, index) => (
-          <TechItem key={index} {...tech} />
-        ))}
+        <div className="flex flex-wrap gap-5">
+          {technologies.map((tech, index) => (
+            <TechItem key={index} {...tech} />
+          ))}
+        </div>
       </section>
 
       <section
@@ -42,15 +47,24 @@ export default function ProjetoPageContent({
         className="py-24 min-h-screen flex flex-col items-center"
       >
         <h2 className="text-2xl font-semibold mb-2">Galeria</h2>
-        <div className="grid grid-cols-2 gap-4">
-          {gallery.map((img, idx) => (
-            <img
-              key={idx}
-              src={img}
-              alt={`Screenshot ${idx + 1}`}
-              className="rounded-lg shadow"
-            />
-          ))}
+        <div className=" flex flex-wrap gap-4">
+          {gallery.map((img, idx) => {
+            // Pula a primeira imagem se for mobile
+            if (projectType === "mobile" && idx === 0) return null;
+
+            return (
+              <img
+                key={idx}
+                src={img}
+                alt={`Screenshot ${idx + 1}`}
+                className={`rounded-lg shadow object-cover ${
+                  projectType === "desktop"
+                    ? "w-[520px] h-60"
+                    : "w-[300px] h-[700px]"
+                }`}
+              />
+            );
+          })}
         </div>
       </section>
     </>
