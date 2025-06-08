@@ -8,6 +8,7 @@
     "contact": "Contact"
   },
   "NavProjects": {
+    "banner": "Banner",
     "navigation": "Navigation",
     "about": "About",
     "technologies": "Technologies",
@@ -64,6 +65,8 @@
   },
   "Projects": {
     "myProjects": "My Projects",
+    "seeProjectOnline": "See On-line Project",
+    "about": "About the Project",
     "description": "Here you can see some of the projects I have developed",
     "learnMore": "Find out more about the project by clicking on any of them!",
     "status": {

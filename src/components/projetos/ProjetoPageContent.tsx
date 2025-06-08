@@ -1,72 +1,64 @@
+"use client";
 import { Project } from "@/data/projects";
-import TechItem from "../TechItem";
-import { useTranslations } from "next-intl";
+import { useEffect } from "react";
+import { useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import AboutSection from "./sections/AboutSection";
+import BannerSection from "./sections/BannerSection";
+import GallerySection from "./sections/GallerySection";
+import TechSection from "./sections/TechSection";
+import { useMobile } from "@/contexts/MobileContext";
 
-export default function ProjetoPageContent({
-  name,
-  about,
-  description,
-  techDescription,
-  technologies,
-  gallery,
-  gitHubLink,
-  projectType,
-  projectLink,
-}: Project) {
-  const t = useTranslations("Projects");
-  //placeholder da pagina de projetos
+export default function ProjetoPageContent(props: Project) {
+  //use mobile para pegar o tamanho da tela
+  const { isMobile } = useMobile();
+
+  //hook de animaçoes das sessoes
+  const useAnimatedSection = (threshold: number) => {
+    const controls = useAnimation();
+    const [ref, inView] = useInView({ threshold, triggerOnce: true });
+
+    useEffect(() => {
+      if (inView) controls.start("visible");
+    }, [inView, controls]);
+
+    return { ref, controls };
+  };
+
+  //animaçoes individuais
+  const aboutText = useAnimatedSection(isMobile ? 0.05 : 0.2);
+  const aboutImage = useAnimatedSection(isMobile ? 0.05 : 0.2);
+  const tech = useAnimatedSection(isMobile ? 0.05 : 0.2);
+
   return (
-    <>
-      <section
-        id="about"
-        className="py-24 min-h-screen flex flex-col items-center"
-      >
-        <h1 className="text-4xl font-bold mb-4">{t(name)}</h1>
-        <p>{t(about)}</p>
-        <p>{t(description)}</p>
-        {/*se tiver ele mpuxa da tradução se nao tiver nao faz isso e segue*/}
-        {techDescription && <p>{t(techDescription)}</p>}
-        {gitHubLink && <p> {gitHubLink} </p>}
-        {projectLink && <p> {projectLink} </p>}
-      </section>
-
-      <section
-        id="technologies"
-        className="py-24 min-h-screen flex flex-col items-center"
-      >
-        <h2 className="text-2xl font-semibold mb-2">Tecnologias</h2>
-        <div className="flex flex-wrap gap-5">
-          {technologies.map((tech, index) => (
-            <TechItem key={index} {...tech} />
-          ))}
-        </div>
-      </section>
-
-      <section
-        id="gallery"
-        className="py-24 min-h-screen flex flex-col items-center"
-      >
-        <h2 className="text-2xl font-semibold mb-2">Galeria</h2>
-        <div className=" flex flex-wrap gap-4">
-          {gallery.map((img, idx) => {
-            // Pula a primeira imagem se for mobile
-            if (projectType === "mobile" && idx === 0) return null;
-
-            return (
-              <img
-                key={idx}
-                src={img}
-                alt={`Screenshot ${idx + 1}`}
-                className={`rounded-lg shadow object-cover ${
-                  projectType === "desktop"
-                    ? "w-[520px] h-60"
-                    : "w-[300px] h-[700px]"
-                }`}
-              />
-            );
-          })}
-        </div>
-      </section>
-    </>
+    <div className="max-w-6xl mx-auto px-4">
+      <BannerSection
+        name={props.name}
+        description={props.description}
+        projectLink={props.projectLink}
+      />
+      <AboutSection
+        about={props.about}
+        gitHubLink={props.gitHubLink}
+        gallery={props.gallery}
+        name={props.name}
+        projectType={props.projectType}
+        controlsText={aboutText.controls}
+        refText={aboutText.ref}
+        controlsImage={aboutImage.controls}
+        refImage={aboutImage.ref}
+      />
+      <TechSection
+        technologies={props.technologies}
+        techDescription={props.techDescription}
+        controls={tech.controls}
+        refProp={tech.ref}
+      />
+      <GallerySection
+        gallery={props.gallery}
+        name={props.name}
+        projectType={props.projectType}
+      />
+    </div>
   );
 }
