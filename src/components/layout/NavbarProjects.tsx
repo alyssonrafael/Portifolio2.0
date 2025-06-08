@@ -23,7 +23,7 @@ export function NavbarProjects() {
   const [activeSection, setActiveSection] = useState("");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const sections = ["about", "technologies", "gallery"];
+  const sections = ["banner", "about", "technologies", "gallery"];
 
   const handleScroll = () => {
     const sectionOffsets = sections
@@ -37,7 +37,7 @@ export function NavbarProjects() {
 
     const activeSection =
       sectionOffsets.reverse().find(({ offset }) => scrollPosition >= offset)
-        ?.id || "about";
+        ?.id || "banner";
 
     setActiveSection(activeSection);
   };

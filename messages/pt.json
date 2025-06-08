@@ -8,6 +8,7 @@
     "contact": "Contato"
   },
   "NavProjects": {
+    "banner": "Banner",
     "navigation": "Navegação",
     "about": "Sobre",
     "technologies": "Tecnologias",
@@ -64,6 +65,8 @@
   },
   "Projects": {
     "myProjects": "Meus Projetos",
+    "seeProjectOnline": "Ver Projeto Online",
+    "about": "Sobre o Projeto",
     "description": "Aqui você pode ver alguns dos projetos que desenvolvi",
     "learnMore": "Saiba mais sobre o projeto é so clicar em algum deles!",
     "status": {
