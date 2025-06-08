@@ -3,9 +3,17 @@
     "navigation": "Navigation",
     "home": "Home",
     "about": "About",
-    "tecnologies": "Tecnologies",
+    "technologies": "Technologies",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "NavProjects": {
+    "banner": "Banner",
+    "navigation": "Navigation",
+    "about": "About",
+    "technologies": "Technologies",
+    "gallery": "Gallery",
+    "backToHome": "Back to Home"
   },
   "MoreOptions": {
     "moreOptions": "More Options",
@@ -50,9 +58,57 @@
       }
     }
   },
-  "Tecnologies": {
+  "Technologies": {
     "title": "Technologies & Tools",
     "description": "What technologies and tools do I master?",
     "development": "Development"
+  },
+  "Projects": {
+    "myProjects": "My Projects",
+    "seeProjectOnline": "See On-line Project",
+    "about": "About the Project",
+    "description": "Here you can see some of the projects I have developed",
+    "learnMore": "Find out more about the project by clicking on any of them!",
+    "status": {
+      "hosted": "Hosted for entertainment",
+      "production": "Up and running",
+      "notHosted": "Not hosted",
+      "documentationOnly": "Documentation only"
+    },
+    "agendapp": {
+      "name": "AgendApp",
+      "about": "AgendApp is a mobile application focused on scheduling and service availability, connecting clients and providers in a simple, intuitive, and efficient way. Originally started as an academic project, it has evolved into a product with real market potential. The development process sparked my interest in mobile development, motivating me to build a complete solution with a robust backend focused on scalability, security, and maintainability.",
+      "description": "AgendApp is a mobile app for service scheduling, connecting clients and providers through an intuitive interface. Started as an academic project, it evolved into a full solution with a robust and scalable backend.",
+      "techDescription": "AgendApp was built using React Native and TypeScript on the mobile side, delivering a modern, responsive interface focused on user experience. The backend was developed with Node.js, TypeScript, Prisma ORM, and PostgreSQL, ensuring security, scalability, and clean architecture. It also includes JWT authentication, Google login (OAuth2), password recovery via email, image upload support, and uses Docker to streamline the development environment"
+    },
+    "storage2": {
+      "name": "Storage 2.0",
+      "about": "Storage 2.0 started as an academic project in Java but evolved into a real-world application now used by a company. To reduce hosting costs and simplify maintenance, I rewrote the backend in Node.js, preserving Object-Oriented Programming principles. As the system matured, I implemented features like PDF/CSV report exports, JWT-based authentication, admin-level user authorization, and thermal printer integration for custom receipt printing. The frontend was redesigned using React, TypeScript, Tailwind CSS, and React Hook Form, creating a cleaner, more responsive UI tailored to the company’s branding.",
+      "description": "Storage 2.0 is a complete inventory and sales management system, currently used by a real company. Rewritten in Node.js, it features secure authentication, detailed reports, and a modern interface, bringing scalability and robustness to daily operations.",
+      "techDescription": "Storage 2.0 features a front-end built with React, TypeScript, Tailwind CSS, and React Hook Form, delivering a responsive and smooth user experience. The back-end uses Node.js with Express, Prisma ORM, and PostgreSQL, along with JWT-based authentication. It also includes PDF/CSV report generation, thermal printer integration, and user authorization — all tailored to meet the real needs of the company."
+    },
+    "storage": {
+      "name": "Storage",
+      "about": "Storage is a full-stack project built to enhance my skills across all stages of web development — from Figma prototyping to building the API and frontend. It was my first larger, fully self-made project, developed entirely from scratch. I worked with concepts like authentication, hosting, and security, tackling challenges such as shopping cart logic and generating accurate reports, always focusing on performance and user experience.",
+      "description": "Storage is a complete web application for inventory and sales management, featuring product registration, sales tracking, and secure access control to protected pages.",
+      "techDescription": "For the development of Storage, I used modern tools aligned with industry best practices. On the frontend, I chose React for its flexibility and responsiveness, paired with Tailwind CSS for fast, consistent, and responsive styling. The UI was prototyped in Figma, providing a clear and collaborative design process before implementation. On the backend, I used Node.js with TypeScript for scalability and type safety, and Prisma as the ORM to simplify database communication. I chose PostgreSQL for its reliability and performance, and the entire application was containerized with Docker to streamline environment setup and future deployment."
+    },
+    "costs": {
+      "name": "Costs",
+      "about": "COSTS was designed to simplify the financial tracking of projects. With a clean and intuitive interface, users can create projects, log expenses, assign them to specific categories, and monitor how much has been spent at each stage. The platform provides a clear overview of the financial status of each project, empowering teams to make informed decisions and stay within budget. It’s designed to be user-friendly, accessible, and efficient for both beginners and experienced users. This project was also a valuable exercise in working with CRUD operations, state management, and front-end best practices using React.",
+      "description": "COSTS is a simple and effective platform for managing project expenses, helping users stay organized and on budget with clear categorization and insights."
+    },
+    "analise": {
+      "name": "Data analysis",
+      "about": "This project was developed as part of a Rapid Application Development course in Python and focuses on analyzing global data on HIV/AIDS-related deaths. Using datasets from Kaggle, we applied exploratory data analysis techniques with Pandas and created visualizations with Plotly. The final result is an interactive dashboard built with Dash, enabling clear and accessible data visualization for a wide audience. The project aimed to enhance skills in data processing and visualization while delivering an informative, user-friendly interface.",
+      "description": "Interactive Python dashboard for global HIV/AIDS death data analysis using Pandas, Plotly, and Dash.",
+      "techDescription": "This project was developed using Python as the main programming language, with the support of libraries such as Pandas for data cleaning and manipulation, and Plotly for building interactive and visually engaging charts. The dashboard interface was created using Dash, a powerful framework for rapidly building interactive web applications with Python."
+    },
+    "to-do": {
+      "name": "To-Do-List",
+      "about": "This project was created to strengthen my skills in fullstack development. To-do-list Full offers features such as task categorization, daily task overview, calendar-based organization, and a smooth user experience to boost productivity. Throughout the development process, I tackled challenges like handling dates with TypeScript, integrating libraries such as React Big Calendar, and following clean code and modularization practices. I also deepened my understanding of fullstack integration, consuming REST APIs built with Prisma and Node.js. More than just a task manager, this project represents my technical evolution and commitment to building structured, user-friendly, and scalable solutions.",
+      "description": "To-do-list Full is a complete web application for daily task management. With a modern, responsive, and intuitive interface, it allows users to create, edit, view, and delete tasks with ease, categorize them, and view everything on a built-in calendar.",
+      "techDescription": "On the front end, I used React with TypeScript, applying componentization principles, custom hooks, and state management using useState and useEffect. The UI was styled with Tailwind CSS, and the calendar view was implemented using React Big Calendar. The back end was built with Node.js and Express, using Prisma ORM to interact with a PostgreSQL database. Date manipulation was handled with Date-fns, and the entire project was version-controlled with Git and GitHub."
+    }
   }
 }

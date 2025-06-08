@@ -3,9 +3,17 @@
     "navigation": "Navegação",
     "home": "Inicio",
     "about": "Sobre",
-    "tecnologies": "Tecnologias",
+    "technologies": "Tecnologias",
     "projects": "Projetos",
     "contact": "Contato"
+  },
+  "NavProjects": {
+    "banner": "Banner",
+    "navigation": "Navegação",
+    "about": "Sobre",
+    "technologies": "Tecnologias",
+    "gallery": "Galeria",
+    "backToHome": "Voltar para o Inicio"
   },
   "MoreOptions": {
     "moreOptions": "Mais Opções",
@@ -50,9 +58,57 @@
       }
     }
   },
-  "Tecnologies": {
+  "Technologies": {
     "title": "Tecnologias e Ferramentas",
     "description": "Quais tecnologias e ferramentas eu domino?",
     "development": "Desenvolvimento"
+  },
+  "Projects": {
+    "myProjects": "Meus Projetos",
+    "seeProjectOnline": "Ver Projeto Online",
+    "about": "Sobre o Projeto",
+    "description": "Aqui você pode ver alguns dos projetos que desenvolvi",
+    "learnMore": "Saiba mais sobre o projeto é so clicar em algum deles!",
+    "status": {
+      "hosted": "Hospedado para diversão",
+      "production": "No ar e sendo utilizado",
+      "notHosted": "Não hospedado",
+      "documentationOnly": "Somente documentado"
+    },
+    "agendapp": {
+      "name": "AgendApp",
+      "about": "O AgendApp é um aplicativo mobile focado no agendamento e na disponibilização de serviços, conectando clientes e prestadores de forma simples, intuitiva e eficiente. Iniciado como um projeto acadêmico, evoluiu para um produto com potencial real de mercado. A experiência adquirida durante o desenvolvimento despertou meu interesse por mobile, levando-me a expandir a aplicação com funcionalidades completas e um backend robusto, visando escalabilidade, segurança e organização.",
+      "description": "O AgendApp é um aplicativo mobile para agendamento de serviços, conectando clientes e prestadores com uma interface intuitiva. Iniciado como projeto acadêmico, evoluiu para uma solução completa com backend robusto e escalável.",
+      "techDescription": "O AgendApp foi desenvolvido com React Native e TypeScript no mobile, oferecendo uma interface moderna, responsiva e com foco na experiência do usuário. No backend, utilizei Node.js com TypeScript, Prisma ORM e PostgreSQL, garantindo segurança, escalabilidade e uma estrutura bem organizada. Também implementei autenticação com JWT, login via Google (OAuth2), recuperação de senha por e-mail e suporte ao envio de imagens, além de usar Docker para facilitar o ambiente de desenvolvimento."
+    },
+    "storage2": {
+      "name": "Storage 2.0",
+      "about": "O Storage 2.0 nasceu como um projeto acadêmico em Java, mas evoluiu para uma aplicação real usada por uma empresa. Para reduzir custos e facilitar a manutenção, reescrevi o back-end em Node.js, mantendo os princípios de Programação Orientada a Objetos. Durante a evolução do projeto, adicionei novas funcionalidades como exportação de relatórios em PDF e CSV, autenticação com JWT, autorização de usuários pelo administrador e integração com impressora térmica para emissão de recibos personalizados. Além disso, o front-end foi completamente remodelado com React, TypeScript, Tailwind e React Hook Form, resultando em uma interface mais fluida, responsiva e adaptada à identidade visual da empresa.",
+      "description": "O Storage 2.0 é a evolução do meu sistema de gerenciamento de estoque e vendas. Reescrito em Node.js para reduzir custos e facilitar a manutenção, ele é hoje utilizado por uma empresa real. Com uma interface moderna e funcionalidades como relatórios avançados, autenticação reforçada e impressão térmica, o projeto representa um salto em robustez, usabilidade e escalabilidade.",
+      "techDescription": "O Storage 2.0 conta com um front-end em React, TypeScript, Tailwind CSS e React Hook Form, oferecendo uma experiência fluida e responsiva. No back-end, foi utilizado Node.js com Express, Prisma ORM e PostgreSQL, além de autenticação com JWT. A aplicação também integra geração de relatórios em PDF/CSV, impressão em impressoras térmicas e um sistema de autorização de usuários, tudo adaptado às necessidades reais da empresa."
+    },
+    "storage": {
+      "name": "Storage",
+      "about": "O Storage é um projeto full-stack criado para aprimorar minhas habilidades em todas as etapas do desenvolvimento web — da prototipagem no Figma à construção da API e do frontend. Foi meu primeiro projeto mais completo, feito 100% do zero e de forma totalmente autoral. Nele, trabalhei conceitos como autenticação, hospedagem e segurança, enfrentando desafios como a lógica do carrinho de compras e a geração de relatórios precisos, sempre focando em performance e na experiência do usuário.",
+      "description": "O Storage é uma aplicação web completa para controle de estoque e vendas, com cadastro de produtos, registro de vendas e gerenciamento seguro de acessos a páginas protegidas.",
+      "techDescription": "Para o desenvolvimento do Storage, utilizei ferramentas modernas e alinhadas às boas práticas do mercado. No frontend, optei por React pela sua flexibilidade e reatividade, junto com Tailwind CSS para agilizar a estilização e manter um design responsivo e consistente. A prototipagem foi feita no Figma, permitindo uma visualização clara e colaborativa da interface antes da implementação. No backend, utilizei Node.js com TypeScript para garantir escalabilidade e tipagem segura, e Prisma como ORM para facilitar a comunicação com o banco de dados. O PostgreSQL foi escolhido pela sua robustez, e a aplicação foi containerizada com Docker, o que facilita a configuração do ambiente e a futura implantação em produção."
+    },
+    "costs": {
+      "name": "Costs",
+      "about": "O COSTS foi criado com o objetivo de facilitar o gerenciamento financeiro de projetos. Através de uma interface limpa e intuitiva, os usuários podem cadastrar novos projetos, registrar despesas, atribuí-las a categorias específicas e acompanhar quanto foi investido em cada etapa. A plataforma oferece uma visão clara do progresso financeiro de cada projeto, permitindo que as equipes tomem decisões com base em dados atualizados. A estrutura foi pensada para atender tanto usuários iniciantes quanto mais experientes, promovendo o controle de orçamento de forma prática e acessível. Esse projeto também foi uma oportunidade para trabalhar conceitos fundamentais de CRUD, gerenciamento de estado e boas práticas de front-end com React.",
+      "description": "COSTS é uma plataforma simples e eficaz para o controle de despesas por projeto, com foco em organização, categorização e visualização clara do orçamento."
+    },
+    "analise": {
+      "name": "Análise de dados",
+      "about": "Este projeto foi desenvolvido na disciplina de Desenvolvimento Rápido de Aplicativos em Python e tem como foco a análise de dados sobre o número de mortes por HIV/AIDS ao redor do mundo. Utilizando dados do Kaggle, aplicamos técnicas de análise exploratória com a biblioteca Pandas e visualizações com Plotly. Como resultado, construímos uma dashboard interativa com o framework Dash, permitindo uma visualização clara e acessível dos dados para diversos perfis de público. O projeto teve como principal objetivo o aprofundamento no uso de ferramentas de análise de dados e a criação de uma interface informativa e funcional.",
+      "description": "Dashboard interativa em Python para análise de dados globais de mortes por HIV/AIDS, utilizando Pandas, Plotly e Dash.",
+      "techDescription": "Para a análise dos dados sobre mortes por HIV/AIDS, utilizei o Python como linguagem principal, juntamente com bibliotecas como Pandas para o tratamento e manipulação dos dados, e Plotly para a criação de gráficos interativos e visuais. A dashboard foi construída com o Dash, um framework que permite o desenvolvimento de aplicações web interativas com Python de forma rápida e eficiente. "
+    },
+    "to-do": {
+      "name": "To-Do-List",
+      "about": "Este projeto nasceu com o objetivo de consolidar minhas habilidades em desenvolvimento fullstack. A To-do-list Full oferece funcionalidades como categorização de tarefas, exibição de atividades do dia, gerenciamento por calendário e uma experiência fluida para aumentar a produtividade dos usuários. Durante o desenvolvimento, mergulhei em desafios como a manipulação de datas com TypeScript, integração com bibliotecas como React Big Calendar e o uso de boas práticas para manter um código limpo e modularizado. Também aprofundei meu conhecimento na integração entre front-end e back-end, consumindo APIs construídas com Prisma e Node.js. Mais do que uma simples lista de tarefas, essa aplicação representa meu avanço técnico e meu comprometimento em criar soluções bem estruturadas, usáveis e escaláveis.",
+      "description": "A To-do-list Full é uma aplicação web completa para organização de tarefas diárias. Com uma interface moderna, responsiva e intuitiva, permite ao usuário criar, editar, visualizar e excluir tarefas com praticidade, além de categorizá-las e visualizá-las por data no calendário.",
+      "techDescription": "No front-end, utilizei React com TypeScript, aplicando princípios de componentização, hooks personalizados e gerenciamento de estado com useState e useEffect. A interface foi estilizada com Tailwind CSS, e a visualização de tarefas no calendário foi implementada com a biblioteca React Big Calendar. No back-end, usei Node.js com Express, integrando o Prisma ORM para comunicação com um banco de dados PostgreSQL. A manipulação de datas foi otimizada com a biblioteca Date-fns, e o projeto contou com versionamento e colaboração via Git e GitHub."
+    }
   }
 }
