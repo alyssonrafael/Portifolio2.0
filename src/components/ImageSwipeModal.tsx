@@ -1,13 +1,13 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { X } from "lucide-react";
 import { useEffect } from "react";
-import Image from 'next/image';
+import Image from "next/image";
 
 // Interface que define as props do componente
 interface ImageSwipeModalProps {
-  images: string[];          // Array de URLs das imagens
-  selectedIndex: number;     // Índice da imagem selecionada inicialmente
-  onClose: () => void;       // Função para fechar o modal
+  images: string[]; // Array de URLs das imagens
+  selectedIndex: number; // Índice da imagem selecionada inicialmente
+  onClose: () => void; // Função para fechar o modal
   onSelect: (index: number) => void; // Função chamada quando uma nova imagem é selecionada
 }
 
@@ -68,29 +68,36 @@ export default function ImageSwipeModal({
 
   return (
     // Overlay do modal
-    <div className="fixed inset-0 z-50 bg-black/80 flex flex-col items-center justify-center p-4"
+    <div
+      className="fixed inset-0 z-50 bg-black/80 flex flex-col items-center justify-center p-4"
       onClick={onClose} // Fecha o modal ao clicar fora
     >
       {/* Botão de fechar */}
-      <button className="absolute top-4 right-4 z-50 text-white bg-black/50 p-2 rounded-full"
+      <button
+        className="absolute top-4 right-4 z-50 text-white bg-black/50 p-2 rounded-full"
         onClick={onClose}
       >
         <X />
       </button>
 
       {/* Carrossel Principal - exibe a imagem em tamanho maior */}
-      <div className="overflow-hidden w-full max-w-5xl px-4"
+      <div
+        className="overflow-hidden w-full max-w-5xl px-4"
         onClick={(e) => e.stopPropagation()}
         ref={emblaRef}
       >
         <div className="flex select-none">
           {images.map((src, i) => (
-            <div className="min-w-full flex justify-center items-center p-2" key={i}>
+            <div
+              className="min-w-full flex justify-center items-center p-2"
+              key={i}
+            >
               <Image
                 src={src}
-                fill
                 alt={`Imagem ${i + 1}`}
-                className="max-h-[80vh] object-contain rounded-lg"
+                width={1200}
+                height={800}
+                className="max-h-[80vh] w-auto h-auto object-contain rounded-lg"
                 draggable={false}
               />
             </div>
@@ -99,7 +106,8 @@ export default function ImageSwipeModal({
       </div>
 
       {/* Carrossel de Miniaturas - navegação rápida */}
-      <div className="overflow-hidden w-full max-w-5xl mt-4"
+      <div
+        className="overflow-hidden w-full max-w-5xl mt-4"
         onClick={(e) => e.stopPropagation()}
         ref={thumbEmblaRef}
       >
@@ -120,8 +128,9 @@ export default function ImageSwipeModal({
             >
               <Image
                 src={src}
-                fill
                 alt={`Miniatura ${i + 1}`}
+                width={80}
+                height={80}
                 className="w-full h-full object-cover"
                 draggable={false}
               />
