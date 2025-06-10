@@ -5,15 +5,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MoreOptionsDropdown } from "./MoreOptionsDropDown";
 import { useTranslations } from "next-intl";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -48,6 +42,14 @@ export function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  //efeito para travar o scroll
+  useEffect(() => {
+    if (isDrawerOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isDrawerOpen]);
 
   const isActive = (section: string) =>
     activeSection === section || (pathname === "/" && section === "home");
@@ -66,90 +68,99 @@ export function Navbar() {
         : "text-muted-foreground"
     }`;
 
-  const handleLinkClick = () => {
-    setIsDrawerOpen(false);
-  };
-
   return (
-    <header className="w-full p-4 sticky top-0 z-50 bg-transparent backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto flex justify-between items-center relative">
-        <Link href="/" className="text-4xl font-bold">
-          &lt;/&gt;
-        </Link>
+    <>
+      <header className="w-full p-4 sticky top-0 z-40 bg-transparent backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto flex justify-between items-center relative">
+          <Link href="/" className="text-4xl font-bold">
+            &lt;/&gt;
+          </Link>
 
-        {/* Navegação central - visível apenas em lg+ */}
-        <nav className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-6">
-          {sections.map((section) => (
-            <a
-              key={section}
-              href={`#${section}`}
-              className={linkClasses(section)}
+          {/* Navegação central (para telas grandes) */}
+          <nav className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-6">
+            {sections.map((section) => (
+              <a
+                key={section}
+                href={`#${section}`}
+                className={linkClasses(section)}
+              >
+                {t(section)}
+              </a>
+            ))}
+          </nav>
+
+          <div className="lg:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsDrawerOpen(!isDrawerOpen)}
             >
-              {t(section)}
-            </a>
-          ))}
-        </nav>
+              <Menu className="!w-6 !h-6" />
+            </Button>
+          </div>
 
-        {/* Drawer para mobile */}
-        <div className="flex items-center gap-4 lg:hidden">
-          <Drawer
-            direction="left"
-            open={isDrawerOpen}
-            onOpenChange={setIsDrawerOpen}
-            shouldScaleBackground={false}
-          >
-            <DrawerTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="!w-6 !h-6" />
-              </Button>
-            </DrawerTrigger>
-            <DrawerContent
-              className="bg-bg-primary dark:bg-bg-dark border-none h-full text-text-primary dark:text-text-dark"
-              onInteractOutside={(e) => e.preventDefault()}
+          {/* Dropdown em telas grandes */}
+          <div className="hidden lg:flex">
+            <MoreOptionsDropdown />
+          </div>
+        </div>
+      </header>
+
+      {/* Drawer para mobile */}
+      <AnimatePresence>
+        {isDrawerOpen && (
+          <>
+            {/* Overlay - cobre a tela toda */}
+            <motion.div
+              className="fixed inset-0 bg-black/50 z-40"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsDrawerOpen(false)}
+            />
+
+            <motion.div
+              className="fixed top-0 left-0 h-screen min-w-[50vw] max-w-[75vw] bg-background z-50 shadow-lg flex flex-col bg-bg-primary dark:bg-bg-dark border-none text-text-primary dark:text-text-dark"
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "tween", duration: 0.3 }}
             >
-              <div className="flex flex-col h-full">
-                <DrawerHeader className="border-b flex flex-row items-center justify-between px-4 py-4">
-                  <DrawerTitle className="text-2xl">
-                    {t("navigation")}
-                  </DrawerTitle>
-                  <Button
-                    onClick={() => setIsDrawerOpen(false)}
-                    variant="ghost"
-                    size="icon"
-                    className="h-8 w-8"
-                  >
-                    <X className="!w-6 !h-6" />
-                  </Button>
-                </DrawerHeader>
-
-                <div className="flex-1 overflow-y-auto p-2">
-                  <nav className="flex flex-col ">
-                    {sections.map((section) => (
-                      <a
-                        key={section}
-                        href={`#${section}`}
-                        className={mobileLinkClasses(section)}
-                        onClick={handleLinkClick}
-                      >
-                        {t(section)}
-                      </a>
-                    ))}
-                  </nav>
-                </div>
-
-                <div className="p-4 border-t">
-                  <MoreOptionsDropdown />
-                </div>
+              {/* Cabeçalho */}
+              <div className="flex items-center justify-between p-4 border-b">
+                <h2 className="text-2xl font-semibold">{t("navigation")}</h2>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsDrawerOpen(false)}
+                >
+                  <X className="w-6 h-6" />
+                </Button>
               </div>
-            </DrawerContent>
-          </Drawer>
-        </div>
 
-        {/* Menu em telas grandes */}
-        <div className="hidden lg:flex">
-          <MoreOptionsDropdown />
-        </div>
-      </div>
-    </header>
+              {/* Links */}
+              <div className="flex-1 overflow-y-auto">
+                <nav className="flex flex-col p-2">
+                  {sections.map((section) => (
+                    <a
+                      key={section}
+                      href={`#${section}`}
+                      className={mobileLinkClasses(section)}
+                      onClick={() => setIsDrawerOpen(false)}
+                    >
+                      {t(section)}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+              {/* Mais opções */}
+              <div className="p-4 border-t">
+                <MoreOptionsDropdown />
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </>
   );
 }

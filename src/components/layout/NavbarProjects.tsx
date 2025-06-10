@@ -5,18 +5,11 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { MoreOptionsDropdown } from "./MoreOptionsDropDown";
 import { useTranslations } from "next-intl";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Home, Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 
 export function NavbarProjects() {
-
   const t = useTranslations("NavProjects");
   const pathname = usePathname();
   const [projectName, setProjectName] = useState("");
@@ -61,6 +54,14 @@ export function NavbarProjects() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  //efeito para travar o scroll
+  useEffect(() => {
+    if (isDrawerOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isDrawerOpen]);
 
   const isActive = (section: string) => activeSection === section;
 
@@ -79,102 +80,115 @@ export function NavbarProjects() {
     }`;
 
   return (
-    <header className="w-full p-4 sticky top-0 z-50 bg-transparent backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto flex justify-between items-center relative">
-        <Link href="/#projects" aria-label="Voltar aos projetos">
-          <ArrowLeft className="text-4xl m-1" />
-        </Link>
+    <>
+      <header className="w-full p-4 sticky top-0 z-40 bg-transparent backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto flex justify-between items-center relative">
+          <Link href="/#projects" aria-label="Voltar aos projetos">
+            <ArrowLeft className="text-4xl m-1" />
+          </Link>
 
-        <nav
-          className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-6"
-          aria-label="Navegação do projeto"
-        >
-          {sections.map((section) => (
-            <a
-              key={section}
-              href={`#${section}`}
-              className={linkClasses(section)}
-            >
-              {t(section)}
-            </a>
-          ))}
-        </nav>
-
-        {/* Nome do projeto visível apenas no mobile */}
-        <header className="lg:hidden text-lg font-semibold text-text-primary dark:text-text-dark">
-          {projectName}
-        </header>
-
-        <div className="flex items-center gap-4 lg:hidden">
-          <Drawer
-            direction="left"
-            open={isDrawerOpen}
-            onOpenChange={setIsDrawerOpen}
-            shouldScaleBackground={false}
+          <nav
+            className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-6"
+            aria-label="Navegação do projeto"
           >
-            <DrawerTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="w-6 h-6" />
-              </Button>
-            </DrawerTrigger>
+            {sections.map((section) => (
+              <a
+                key={section}
+                href={`#${section}`}
+                className={linkClasses(section)}
+              >
+                {t(section)}
+              </a>
+            ))}
+          </nav>
 
-            <DrawerContent
-              className="bg-bg-primary dark:bg-bg-dark border-none h-full text-text-primary dark:text-text-dark"
-              onInteractOutside={(e) => e.preventDefault()}
+          {/* Nome do projeto visível apenas no mobile */}
+          <h1 className="lg:hidden text-lg font-semibold text-text-primary dark:text-text-dark">
+            {projectName}
+          </h1>
+
+          <div className="lg:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsDrawerOpen(!isDrawerOpen)}
             >
-              <div className="flex flex-col h-full">
-                <DrawerHeader className="border-b flex flex-row items-center justify-between px-4 py-4">
-                  <DrawerTitle className="text-2xl">
-                    {t("navigation")}
-                  </DrawerTitle>
-                  <Button
-                    onClick={() => setIsDrawerOpen(false)}
-                    variant="ghost"
-                    size="icon"
-                    className="h-8 w-8"
-                    aria-label="Fechar menu"
-                  >
-                    <X className="w-6 h-6" />
-                  </Button>
-                </DrawerHeader>
+              <Menu className="!w-6 !h-6" />
+            </Button>
+          </div>
 
-                <div className="flex-1 overflow-y-auto p-2">
-                  <nav className="flex flex-col" aria-label="Menu mobile">
-                    {sections.map((section) => (
-                      <a
-                        key={section}
-                        href={`#${section}`}
-                        className={mobileLinkClasses(section)}
-                        onClick={() => setIsDrawerOpen(false)}
-                      >
-                        {t(section)}
-                      </a>
-                    ))}
-                  </nav>
-                </div>
+          {/* Dropdown em telas grandes */}
+          <div className="hidden lg:flex">
+            <MoreOptionsDropdown />
+          </div>
+        </div>
+      </header>
 
-                <div className="flex p-4 border-t">
-                  <Link
-                    href="/#projects"
-                    className="flex items-center gap-2 text-xl font-medium text-muted-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsDrawerOpen(false)}
-                  >
-                    <Home className="w-5 h-5" />
-                    {t("backToHome")}
-                  </Link>
-                </div>
-                <div className="p-4 border-t">
-                  <MoreOptionsDropdown />
-                </div>
+      {/* Drawer para mobile */}
+      <AnimatePresence>
+        {isDrawerOpen && (
+          <>
+            {/* Overlay - cobre a tela toda */}
+            <motion.div
+              className="fixed inset-0 bg-black/50 z-40"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsDrawerOpen(false)}
+            />
+
+            <motion.div
+              className="fixed top-0 left-0 h-screen w-[75vw] bg-background z-50 shadow-lg flex flex-col bg-bg-primary dark:bg-bg-dark border-none text-text-primary dark:text-text-dark"
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "tween", duration: 0.3 }}
+            >
+              {/* Cabeçalho */}
+              <div className="flex items-center justify-between p-4 border-b">
+                <h2 className="text-2xl font-semibold">{t("navigation")}</h2>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsDrawerOpen(false)}
+                >
+                  <X className="w-6 h-6" />
+                </Button>
               </div>
-            </DrawerContent>
-          </Drawer>
-        </div>
 
-        <div className="hidden lg:flex">
-          <MoreOptionsDropdown />
-        </div>
-      </div>
-    </header>
+              {/* Links */}
+              <div className="flex-1 overflow-y-auto">
+                <nav className="flex flex-col p-2">
+                  {sections.map((section) => (
+                    <a
+                      key={section}
+                      href={`#${section}`}
+                      className={mobileLinkClasses(section)}
+                      onClick={() => setIsDrawerOpen(false)}
+                    >
+                      {t(section)}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+              <div className="flex p-4 border-t">
+                <Link
+                  href="/#projects"
+                  className="flex items-center gap-2 text-xl font-medium text-muted-foreground hover:text-primary transition-colors"
+                  onClick={() => setIsDrawerOpen(false)}
+                >
+                  <Home className="w-5 h-5" />
+                  {t("backToHome")}
+                </Link>
+              </div>
+              {/* Mais opções */}
+              <div className="p-4 border-t">
+                <MoreOptionsDropdown />
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </>
   );
 }

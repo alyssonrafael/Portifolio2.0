@@ -7,7 +7,7 @@ export default function Section4() {
   const t = useTranslations("Projects");
 
   return (
-    <section id="projects" className="py-24 min-h-screen flex items-center">
+    <section id="projects" className="py-16 md:py-24 min-h-screen ">
       <div className="mx-auto px-4 max-w-7xl w-full">
         <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-center">
           {t("myProjects")}
