@@ -70,7 +70,7 @@ export default function Section3() {
   };
 
   return (
-    <section id="technologies" className="py-24 min-h-screen flex items-center">
+    <section id="technologies" className="py-16 md:py-24 min-h-screen flex items-center">
       <div className="mx-auto px-4 max-w-7xl w-full">
         <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-center">
           {t("title")}
