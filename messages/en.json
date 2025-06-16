@@ -110,5 +110,19 @@
       "description": "To-do-list Full is a complete web application for daily task management. With a modern, responsive, and intuitive interface, it allows users to create, edit, view, and delete tasks with ease, categorize them, and view everything on a built-in calendar.",
       "techDescription": "On the front end, I used React with TypeScript, applying componentization principles, custom hooks, and state management using useState and useEffect. The UI was styled with Tailwind CSS, and the calendar view was implemented using React Big Calendar. The back end was built with Node.js and Express, using Prisma ORM to interact with a PostgreSQL database. Date manipulation was handled with Date-fns, and the entire project was version-controlled with Git and GitHub."
     }
+  },
+  "footer":{
+    "titles":{
+      "end":"The end",
+      "links": "Utils Links",
+      "contact": "Contact"
+    },
+    "links":{
+      "home": "Home",
+      "about":"About",
+      "contact": "Contact"
+    },
+    "about":"You've reached the end of the page, but the work never stops! This is my space to showcase who I am as a developer, with my portfolio, experiences, and what I can do. Feel free to come back anytime – I'm always updating!",
+    "rights":"All rights reserved."
   }
 }
