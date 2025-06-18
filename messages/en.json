@@ -111,18 +111,48 @@
       "techDescription": "On the front end, I used React with TypeScript, applying componentization principles, custom hooks, and state management using useState and useEffect. The UI was styled with Tailwind CSS, and the calendar view was implemented using React Big Calendar. The back end was built with Node.js and Express, using Prisma ORM to interact with a PostgreSQL database. Date manipulation was handled with Date-fns, and the entire project was version-controlled with Git and GitHub."
     }
   },
-  "footer":{
-    "titles":{
-      "end":"The end",
+  "contact": {
+    "title": "Speak with me",
+    "description": "Liked what you saw? I'd love to chat! I'm always on the lookout for new projects and collaboration opportunities. If you have a vision you want to bring to life or just an idea to bounce around, feel free to reach out! Check out my social media and resume below.",
+    "toolTips": {
+      "email": "Send me an email",
+      "github": "See my Github",
+      "linkedIn": "Connect on LinkedIn",
+      "curriculum": "Download my resume"
+    },
+    "invite": "How about we chat?",
+    "invite2": "Send me an email, and let's take the next step together!",
+    "invite3": "Direct to alyssonrafael11@gmail.com",
+    "form": {
+      "namePlaceholder": "Your name",
+      "nameRequired": "Name is required",
+      "emailPlaceholder": "Your email",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email format",
+      "messagePlaceholder": "Your message",
+      "messageRequired": "Message is required",
+      "messageMinLength": "Message must be at least 10 characters",
+      "sendMessage": "Send message",
+      "sending": "Sending...",
+      "sendingData": "Sending data:",
+      "toastSucess": "Email sent successfully!",
+      "toastError": "Error sending email, please try again later.",
+      "rateLimitMinutesAndSeconds": "Please wait {minutes} minute{pluralMinute} and {seconds} second{pluralSecond} before sending again.",
+      "rateLimitSecondsOnly": "Please wait {seconds} second{pluralSecond} before sending again."
+    }
+  },
+  "footer": {
+    "titles": {
+      "end": "The end",
       "links": "Utils Links",
       "contact": "Contact"
     },
-    "links":{
+    "links": {
       "home": "Home",
-      "about":"About",
+      "about": "About",
       "contact": "Contact"
     },
-    "about":"You've reached the end of the page, but the work never stops! This is my space to showcase who I am as a developer, with my portfolio, experiences, and what I can do. Feel free to come back anytime – I'm always updating!",
-    "rights":"All rights reserved."
+    "about": "You've reached the end of the page, but the work never stops! This is my space to showcase who I am as a developer, with my portfolio, experiences, and what I can do. Feel free to come back anytime – I'm always updating!",
+    "rights": "All rights reserved."
   }
 }
