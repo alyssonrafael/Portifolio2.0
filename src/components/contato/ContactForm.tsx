@@ -64,6 +64,9 @@ export default function ContactForm() {
     //se passar pela verificaçao de tempo monta o envio do email
     try {
       const toEmail = process.env.NEXT_PUBLIC_EMAILJS_FROM_EMAIL
+
+      console.log(toEmail)
+
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
@@ -79,7 +82,8 @@ export default function ContactForm() {
       localStorage.setItem(STORAGE_KEY, now.toString());
       toastSuccess(t("toastSucess"));
       reset();
-    } catch {
+    } catch(error) {
+      console.log("erro ao mandar email: ",error)
       //em caso de erro
       toastError(t("toastError") || "Erro ao enviar o email, tente novamente.");
     }
