@@ -79,7 +79,7 @@ export default function ContactForm() {
       localStorage.setItem(STORAGE_KEY, now.toString());
       toastSuccess(t("toastSucess"));
       reset();
-    } catch (error) {
+    } catch {
       //em caso de erro
       toastError(t("toastError") || "Erro ao enviar o email, tente novamente.");
     }
