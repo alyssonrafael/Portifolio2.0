@@ -51,7 +51,6 @@ const devopsTechs: TechItemProps[] = [
 const devTechs: TechItemProps[] = [
   { label: "VScode", icon: <VscVscode />, color: "blue" },
   { label: "Figma", icon: <SiFigma />, color: "pink" },
-  { label: "Docker", icon: <SiDocker />, color: "blue" },
 ];
 
 export default function Section3() {

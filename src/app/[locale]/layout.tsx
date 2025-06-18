@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import { MobileProvider } from "@/contexts/MobileContext";
 
 import "@/app/globals.css";
+import { ToastProvider } from "@/components/ToastProvider";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -41,7 +42,10 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider locale={locale}>
           <ThemeProvider>
-            <MobileProvider>{children}</MobileProvider>
+            <MobileProvider>
+              {children}
+              <ToastProvider />
+            </MobileProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

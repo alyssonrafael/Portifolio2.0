@@ -1,13 +1,13 @@
 import { useTranslations } from "next-intl";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import { MdOutlineDownloading } from "react-icons/md";
+import { ContactIconWithTooltip } from "../contato/ContactIconWithTooltip";
 
 export function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer
-      className="mt-20 border-t border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-900/50"
-    >
+    <footer className="mt-20 border-t border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-900/50">
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-gray-700 dark:text-gray-300">
         <div className="text-center lg:text-left">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
@@ -53,24 +53,19 @@ export function Footer() {
             {t("titles.contact")}
           </h3>
           <div className="flex justify-center space-x-6 text-2xl mt-4">
-            <a
-              href="https://www.linkedin.com/in/alyssonrafael/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn profile"
-              className="hover:text-text-contrast transition-colors duration-300"
-            >
-              <SiLinkedin />
-            </a>
-            <a
+            <ContactIconWithTooltip
               href="https://github.com/alyssonrafael"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub profile"
-              className="hover:text-text-contrast transition-colors duration-300"
-            >
-              <SiGithub />
-            </a>
+              icon={<SiGithub />}
+            />
+            <ContactIconWithTooltip
+              href="https://www.linkedin.com/in/alyssonrafael/"
+              icon={<SiLinkedin />}
+            />
+            <ContactIconWithTooltip
+              href="/curriculos/curriculo-alysson-rafael-pt.pdf"
+              icon={<MdOutlineDownloading />}
+              download={true}
+            />
           </div>
         </div>
       </div>
