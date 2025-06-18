@@ -64,9 +64,6 @@ export default function ContactForm() {
     //se passar pela verificaçao de tempo monta o envio do email
     try {
       const toEmail = process.env.NEXT_PUBLIC_EMAILJS_FROM_EMAIL
-
-      console.log(toEmail)
-
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
