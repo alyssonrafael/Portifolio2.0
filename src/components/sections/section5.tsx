@@ -8,7 +8,7 @@ export default function Section5() {
   const t = useTranslations("contact");
   const locale = useLocale();
 
-    const hrefCurriculo =
+  const hrefCurriculo =
     locale === "pt"
       ? "/curriculos/curriculo-alysson-rafael-pt.pdf"
       : "/curriculos/curriculo-alysson-rafael-en.pdf";
@@ -26,7 +26,9 @@ export default function Section5() {
         <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1.7fr] gap-16 items-center justify-center">
           {/* Bloco de texto e ícones */}
           <div className="flex flex-col gap-6 text-center md:text-left">
-            <p className="text-2xl">{t("description")}</p>
+            <p className="text-base md:text-xl lg:text-2xl">
+              {t("description")}
+            </p>
             <div className="flex gap-6 justify-center md:justify-start">
               <ContactIconWithTooltip
                 href={hrefCurriculo}
@@ -50,7 +52,7 @@ export default function Section5() {
           {/* Formulário e texto convite */}
           <div className="w-full">
             {/* Texto convidativo com ícone */}
-            <div className="flex items-center gap-3 mb-2 justify-center md:justify-start  text-lg font-semibold">
+            <div className="flex flex-col lg:flex-row items-center gap-3 mb-2 justify-center md:justify-start md:text-lg text-base font-semibold text-center md:text-left ">
               <MdEmail className="text-5xl text-text-contrast" />
               <span>{t("invite")}</span>
             </div>
