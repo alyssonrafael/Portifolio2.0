@@ -6,9 +6,11 @@ import {
   SiExpress,
   SiGooglecolab,
   SiHtml5,
+  SiI18Next,
   SiJavascript,
   SiJson,
   SiJupyter,
+  SiNextdotjs,
   SiNodedotjs,
   SiNumpy,
   SiPandas,
@@ -18,6 +20,7 @@ import {
   SiPython,
   SiReact,
   SiReacthookform,
+  SiShadcnui,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
@@ -38,6 +41,36 @@ export interface Project {
 }
 //meus projetos um array de Project
 export const projects: Project[] = [
+  //portifolio
+  {
+    slug: "Portifolio",
+    name: "portfolio2.name", //passado para acessar o objeto na tradução
+    about: "portfolio2.about",
+    description: "portfolio2.description",
+    techDescription: "portfolio2.techDescription",
+    technologies: [
+      { label: "NextJs", icon: <SiNextdotjs />, color: "black" },
+      { label: "TypeScript", icon: <SiTypescript />, color: "blue" },
+      { label: "Tailwind Css", icon: <SiTailwindcss />, color: "cyan" },
+      { label: "Hook Form", icon: <SiReacthookform />, color: "pink" },
+      { label: "Shadcnui", icon: <SiShadcnui />, color: "black" },
+      { label: "I18Next", icon: <SiI18Next />, color: "cyan" },
+    ] as TechItemProps[],
+    gallery: [
+      "/assetsProjects/portifolio/capa.png",
+      "/assetsProjects/portifolio/homeDark.png",
+      "/assetsProjects/portifolio/about.png",
+      "/assetsProjects/portifolio/tech.png",
+      "/assetsProjects/portifolio/projects.png",
+      "/assetsProjects/portifolio/contato.png",
+      "/assetsProjects/portifolio/homeProjeto.png",
+      "/assetsProjects/portifolio/aboutProjeto.png",
+    ],
+    status: "production",
+    gitHubLink: "/Portifolio2.0",
+    projectType: "desktop",
+    projectLink: "https://portifolio-alyssonrafael-2-0-ten.vercel.app/pt",
+  },
   //Agendapp
   {
     slug: "AgendApp",
