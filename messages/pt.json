@@ -75,6 +75,12 @@
       "notHosted": "Não hospedado",
       "documentationOnly": "Somente documentado"
     },
+    "portfolio2": {
+      "name": "Portfólio 2.0",
+      "about": "Este portfólio representa a evolução da minha presença como desenvolvedor front-end, reunindo projetos, experiências e habilidades de forma clara, acessível e visualmente atrativa. A versão 2.0 foi idealizada não só para apresentar meus trabalhos, mas também como um exercício prático de aprendizado e domínio de ferramentas modernas do ecossistema web.",
+      "description": "Portfólio desenvolvido com foco em acessibilidade, organização e apresentação clara dos meus projetos e habilidades, utilizando tecnologias modernas como Next.js, Tailwind e shadcn/ui.",
+      "techDescription": "O Portfólio 2.0 foi construído com Next.js (App Router) e TypeScript, proporcionando performance, organização e escalabilidade. Utilizei Tailwind CSS para uma estilização ágil e responsiva, React Hook Form para gerenciamento de formulários, i18n para suporte à internacionalização e shadcn/ui para componentes acessíveis e consistentes. O projeto ainda conta com envio de mensagens via EmailJS e foi estruturado para facilitar futuras atualizações com mínima fricção."
+    },
     "agendapp": {
       "name": "AgendApp",
       "about": "O AgendApp é um aplicativo mobile focado no agendamento e na disponibilização de serviços, conectando clientes e prestadores de forma simples, intuitiva e eficiente. Iniciado como um projeto acadêmico, evoluiu para um produto com potencial real de mercado. A experiência adquirida durante o desenvolvimento despertou meu interesse por mobile, levando-me a expandir a aplicação com funcionalidades completas e um backend robusto, visando escalabilidade, segurança e organização.",
@@ -110,5 +116,49 @@
       "description": "A To-do-list Full é uma aplicação web completa para organização de tarefas diárias. Com uma interface moderna, responsiva e intuitiva, permite ao usuário criar, editar, visualizar e excluir tarefas com praticidade, além de categorizá-las e visualizá-las por data no calendário.",
       "techDescription": "No front-end, utilizei React com TypeScript, aplicando princípios de componentização, hooks personalizados e gerenciamento de estado com useState e useEffect. A interface foi estilizada com Tailwind CSS, e a visualização de tarefas no calendário foi implementada com a biblioteca React Big Calendar. No back-end, usei Node.js com Express, integrando o Prisma ORM para comunicação com um banco de dados PostgreSQL. A manipulação de datas foi otimizada com a biblioteca Date-fns, e o projeto contou com versionamento e colaboração via Git e GitHub."
     }
+  },
+  "contact": {
+    "title": "Fale comigo",
+    "description": "Gostou do que viu? Ficarei feliz em conversar! Estou sempre de olho em novos projetos e oportunidades de colaboração. Se tem uma visão que quer transformar em realidade ou apenas uma ideia pra gente trocar, me dá um alô! Confira minhas redes sociais e meu currículo logo abaixo.",
+    "toolTips": {
+      "email": "Mande um email",
+      "github": "Veja meu Github",
+      "linkedIn": "Veja meu LinkedIn",
+      "curriculum": "Baixe meu currículo"
+    },
+    "invite": "Que tal a gente bater um papo?",
+    "invite2": "Envie-me um email e vamos dar o próximo passo juntos!",
+    "invite3": "Direcionado para alyssonrafael11@gmail.com",
+    "form": {
+      "namePlaceholder": "Seu nome",
+      "nameRequired": "Nome é obrigatório",
+      "emailPlaceholder": "Seu e-mail",
+      "emailRequired": "E-mail é obrigatório",
+      "emailInvalid": "Formato de e-mail inválido",
+      "messagePlaceholder": "Sua mensagem",
+      "messageRequired": "Mensagem é obrigatória",
+      "messageMinLength": "A mensagem deve ter pelo menos 10 caracteres",
+      "sendMessage": "Enviar mensagem",
+      "sending": "Enviando...",
+      "sendingData": "Enviando dados:",
+      "toastSucess": "Email enviado com sucesso!",
+      "toastError": "Erro ao enviar o email, tente novamente mais tarde.",
+      "rateLimitMinutesAndSeconds": "Aguarde {minutes} minuto{pluralMinute} e {seconds} segundo{pluralSecond} antes de enviar novamente.",
+      "rateLimitSecondsOnly": "Aguarde {seconds} segundo{pluralSecond} antes de enviar novamente."
+    }
+  },
+  "footer": {
+    "titles": {
+      "end": "O Fim",
+      "links": "Links Úteis",
+      "contact": "Contato"
+    },
+    "links": {
+      "home": "Home",
+      "about": "Sobre",
+      "contact": "Contato"
+    },
+    "about": "Chegamos ao fim da página, mas o trabalho continua! Este é meu espaço para apresentar quem sou como desenvolvedor, com meu portfólio, minhas experiências e o que sei fazer. Volte sempre, estou sempre atualizando!",
+    "rights": "Todos os direitos reservados."
   }
 }

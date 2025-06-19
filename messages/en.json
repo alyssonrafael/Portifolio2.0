@@ -75,6 +75,12 @@
       "notHosted": "Not hosted",
       "documentationOnly": "Documentation only"
     },
+    "portfolio2": {
+      "name": "Portfolio 2.0",
+      "about": "This portfolio represents the evolution of my presence as a front-end developer, showcasing projects, experiences, and skills in a clear, accessible, and visually appealing way. Version 2.0 was designed not only to present my work, but also as a practical exercise in mastering modern web development tools.",
+      "description": "A portfolio built with a focus on accessibility, organization, and clear presentation of my projects and skills, using modern technologies like Next.js, Tailwind, and shadcn/ui.",
+      "techDescription": "Portfolio 2.0 was built using Next.js (App Router) and TypeScript, ensuring performance, structure, and scalability. I used Tailwind CSS for responsive and efficient styling, React Hook Form for form management, i18n for internationalization support, and shadcn/ui for accessible and consistent UI components. The project also integrates EmailJS for contact messaging and was designed to make future updates easy and frictionless."
+    },
     "agendapp": {
       "name": "AgendApp",
       "about": "AgendApp is a mobile application focused on scheduling and service availability, connecting clients and providers in a simple, intuitive, and efficient way. Originally started as an academic project, it has evolved into a product with real market potential. The development process sparked my interest in mobile development, motivating me to build a complete solution with a robust backend focused on scalability, security, and maintainability.",
@@ -110,5 +116,49 @@
       "description": "To-do-list Full is a complete web application for daily task management. With a modern, responsive, and intuitive interface, it allows users to create, edit, view, and delete tasks with ease, categorize them, and view everything on a built-in calendar.",
       "techDescription": "On the front end, I used React with TypeScript, applying componentization principles, custom hooks, and state management using useState and useEffect. The UI was styled with Tailwind CSS, and the calendar view was implemented using React Big Calendar. The back end was built with Node.js and Express, using Prisma ORM to interact with a PostgreSQL database. Date manipulation was handled with Date-fns, and the entire project was version-controlled with Git and GitHub."
     }
+  },
+  "contact": {
+    "title": "Speak with me",
+    "description": "Liked what you saw? I'd love to chat! I'm always on the lookout for new projects and collaboration opportunities. If you have a vision you want to bring to life or just an idea to bounce around, feel free to reach out! Check out my social media and resume below.",
+    "toolTips": {
+      "email": "Send me an email",
+      "github": "See my Github",
+      "linkedIn": "Connect on LinkedIn",
+      "curriculum": "Download my resume"
+    },
+    "invite": "How about we chat?",
+    "invite2": "Send me an email, and let's take the next step together!",
+    "invite3": "Direct to alyssonrafael11@gmail.com",
+    "form": {
+      "namePlaceholder": "Your name",
+      "nameRequired": "Name is required",
+      "emailPlaceholder": "Your email",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email format",
+      "messagePlaceholder": "Your message",
+      "messageRequired": "Message is required",
+      "messageMinLength": "Message must be at least 10 characters",
+      "sendMessage": "Send message",
+      "sending": "Sending...",
+      "sendingData": "Sending data:",
+      "toastSucess": "Email sent successfully!",
+      "toastError": "Error sending email, please try again later.",
+      "rateLimitMinutesAndSeconds": "Please wait {minutes} minute{pluralMinute} and {seconds} second{pluralSecond} before sending again.",
+      "rateLimitSecondsOnly": "Please wait {seconds} second{pluralSecond} before sending again."
+    }
+  },
+  "footer": {
+    "titles": {
+      "end": "The end",
+      "links": "Utils Links",
+      "contact": "Contact"
+    },
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "about": "You've reached the end of the page, but the work never stops! This is my space to showcase who I am as a developer, with my portfolio, experiences, and what I can do. Feel free to come back anytime – I'm always updating!",
+    "rights": "All rights reserved."
   }
 }
