@@ -75,6 +75,12 @@
       "notHosted": "Not hosted",
       "documentationOnly": "Documentation only"
     },
+    "portfolio2": {
+      "name": "Portfolio 2.0",
+      "about": "This portfolio represents the evolution of my presence as a front-end developer, showcasing projects, experiences, and skills in a clear, accessible, and visually appealing way. Version 2.0 was designed not only to present my work, but also as a practical exercise in mastering modern web development tools.",
+      "description": "A portfolio built with a focus on accessibility, organization, and clear presentation of my projects and skills, using modern technologies like Next.js, Tailwind, and shadcn/ui.",
+      "techDescription": "Portfolio 2.0 was built using Next.js (App Router) and TypeScript, ensuring performance, structure, and scalability. I used Tailwind CSS for responsive and efficient styling, React Hook Form for form management, i18n for internationalization support, and shadcn/ui for accessible and consistent UI components. The project also integrates EmailJS for contact messaging and was designed to make future updates easy and frictionless."
+    },
     "agendapp": {
       "name": "AgendApp",
       "about": "AgendApp is a mobile application focused on scheduling and service availability, connecting clients and providers in a simple, intuitive, and efficient way. Originally started as an academic project, it has evolved into a product with real market potential. The development process sparked my interest in mobile development, motivating me to build a complete solution with a robust backend focused on scalability, security, and maintainability.",
