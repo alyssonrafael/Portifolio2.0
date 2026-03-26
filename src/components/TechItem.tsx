@@ -13,8 +13,9 @@ type ColorName =
   | "red"
   | "orange"
   | "yellow"
-  | "pink"
-  | "blue2";
+  | "pink" 
+  | "blue2"
+  | "purple";
 
 //props que os items aceitam
 export interface TechItemProps {
@@ -86,6 +87,13 @@ const colorMap = {
     bg: "bg-blue-300/10",
     hoverBorder: "hover:border-blue-300",
     hoverBg: "hover:bg-blue-300/10",
+  },
+  purple: {
+    text: "text-purple-500",
+    border: "border-purple-500",
+    bg: "bg-purple-500/10",
+    hoverBorder: "hover:border-purple-500",
+    hoverBg: "hover:bg-purple-500/10",
   },
 };
 

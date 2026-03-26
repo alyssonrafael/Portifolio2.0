@@ -5,10 +5,9 @@ import {
   SiExpo,
   SiExpress,
   SiGooglecolab,
-  SiHtml5,
+  SiGooglegemini,
   SiI18Next,
   SiJavascript,
-  SiJson,
   SiJupyter,
   SiNextdotjs,
   SiNodedotjs,
@@ -17,13 +16,19 @@ import {
   SiPlotly,
   SiPostgresql,
   SiPrisma,
+  SiPuppeteer,
   SiPython,
   SiReact,
   SiReacthookform,
   SiShadcnui,
+  SiSupabase,
   SiTailwindcss,
+  SiThemoviedatabase,
   SiTypescript,
+  SiVite,
 } from "react-icons/si";
+import { GiIsland } from "react-icons/gi";
+
 
 //campos esperados para o project
 export interface Project {
@@ -41,6 +46,42 @@ export interface Project {
 }
 //meus projetos um array de Project
 export const projects: Project[] = [
+  //imob gestao
+  {
+    slug: "Imob",
+    name: "imob.name",
+    about: "imob.about",
+    description: "imob.description",
+    techDescription: "imob.techDescription",
+    technologies: [
+      { label: "React", icon: <SiReact />, color: "blue" },
+      { label: "TypeScript", icon: <SiTypescript />, color: "blue" },
+      { label: "Tailwind", icon: <SiTailwindcss />, color: "cyan" },
+      { label: "Vite", icon: <SiVite/>, color: "purple" },
+      { label: "react-hook-form", icon: <SiReacthookform/>, color: "pink" },
+      { label: "supabase", icon: <SiSupabase/>, color: "green" },
+      { label: "Tanstak-router", icon: <GiIsland/>, color: "yellow" },
+      { label: "Tanstak-query", icon: <GiIsland/>, color: "yellow" },
+      { label: "pupperter", icon: <SiPuppeteer/>, color:"red" },
+      ] as TechItemProps[],
+      gallery: [
+        "/assetsProjects/imob/capa2.png",
+        "/assetsProjects/imob/capa.png",
+        "/assetsProjects/imob/img1.png",
+        "/assetsProjects/imob/img3.png",
+        "/assetsProjects/imob/img4.png",
+        "/assetsProjects/imob/img5.png",
+        "/assetsProjects/imob/img6.png",
+        "/assetsProjects/imob/img7.png",
+        "/assetsProjects/imob/img8.png",
+        "/assetsProjects/imob/img9.png",
+        "/assetsProjects/imob/img10.png",
+        "/assetsProjects/imob/img11.png",
+        "/assetsProjects/imob/img12.png",
+      ],
+      status: "production",
+      projectType: "desktop",
+  },
   //portifolio
   {
     slug: "Portifolio",
@@ -104,6 +145,36 @@ export const projects: Project[] = [
     gitHubLink: "/AgendApp_Frontend",
     projectType: "mobile",
   },
+  //projeto de filmes da monitoria
+  {
+ slug: "Movie_List",
+    name: "movie.name", 
+    about: "movie.about",
+    description: "movie.description",
+    techDescription: "movie.techDescription",
+    technologies: [
+      { label: "React Native", icon: <SiReact />, color: "cyan" },
+      { label: "TypeScript", icon: <SiTypescript />, color: "blue" },
+      { label: "Tailwind", icon: <SiTailwindcss />, color: "cyan"},
+      { label: "Expo", icon: <SiExpo />, color: "black" },
+      { label: "Gemini ai", icon: <SiGooglegemini />, color: "blue" },
+      { label: "The OMDB API", icon: <SiThemoviedatabase />, color: "blue" }
+    ] as TechItemProps[],
+    gallery: [
+     "/assetsProjects/movie/capa1.png",
+     "/assetsProjects/movie/capa.jpeg",
+     "/assetsProjects/movie/img1.jpeg",
+     "/assetsProjects/movie/img2.jpeg",
+     "/assetsProjects/movie/img3.jpeg",
+     "/assetsProjects/movie/img4.jpeg",
+     "/assetsProjects/movie/img5.jpeg",
+     "/assetsProjects/movie/img6.jpeg",
+     "/assetsProjects/movie/img7.jpeg",
+    ],
+    status: "documentationOnly",
+    gitHubLink: "/Prototipo_monitoria_mobile",
+    projectType: "mobile",
+  },
   //storage 2.0
   {
     slug: "Storage2",
@@ -158,32 +229,9 @@ export const projects: Project[] = [
       "/assetsProjects/storage/carrinho.png",
       "/assetsProjects/storage/dashboard.png",
     ],
-    status: "hosted",
+    status: "documentationOnly",
     gitHubLink: "/Storage",
     projectLink: "https://storage-frontend-eight.vercel.app/",
-    projectType: "desktop",
-  },
-  //Costs
-  {
-    slug: "Costs",
-    name: "costs.name",
-    about: "costs.about",
-    description: "costs.description",
-    technologies: [
-      { label: "HTML", icon: <SiHtml5 />, color: "orange" },
-      { label: "CSS", icon: <SiCss3 />, color: "blue" },
-      { label: "Javascript", icon: <SiJavascript />, color: "yellow" },
-      { label: "Json", icon: <SiJson />, color: "green" },
-    ] as TechItemProps[],
-    gallery: [
-      "/assetsProjects/costs/capa.png",
-      "/assetsProjects/costs/criar.png",
-      "/assetsProjects/costs/projetos.png",
-      "/assetsProjects/costs/detalhes.png",
-      "/assetsProjects/costs/sobre.png",
-    ],
-    status: "documentationOnly",
-    gitHubLink: "/COSTs",
     projectType: "desktop",
   },
   //analise de dados
@@ -211,36 +259,5 @@ export const projects: Project[] = [
     gitHubLink: "/projeto_DEV.rapido.python",
     projectType: "desktop",
   },
-  //to-do
-  {
-    slug: "To-Do-List",
-    name: "to-do.name",
-    about: "to-do.about",
-    description: "to-do.description",
-    techDescription: "to-do.techDescription",
-    technologies: [
-      { label: "TypeScript", icon: <SiTypescript />, color: "blue" },
-      { label: "Javascript", icon: <SiJavascript />, color: "yellow" },
-      { label: "React", icon: <SiReact />, color: "blue" },
-      { label: "Tailwind", icon: <SiTailwindcss />, color: "cyan" },
-      { label: "NodeJs", icon: <SiNodedotjs />, color: "green" },
-      { label: "Express", icon: <SiExpress />, color: "black" },
-      { label: "Docker", icon: <SiDocker />, color: "blue" },
-      { label: "Postgress", icon: <SiPostgresql />, color: "blue" },
-      { label: "Prisma ORM", icon: <SiPrisma />, color: "black" },
-    ] as TechItemProps[],
-    gallery: [
-      "/assetsProjects/to-do/capa.png",
-      "/assetsProjects/to-do/novaTarefa.png",
-      "/assetsProjects/to-do/categoria.png",
-      "/assetsProjects/to-do/tarefaDia.png",
-      "/assetsProjects/to-do/todasTarefas.png",
-      "/assetsProjects/to-do/calendario.png",
-      "/assetsProjects/to-do/sobre.png",
-    ],
-    status: "hosted",
-    gitHubLink: "/to-do-list-full",
-    projectLink: "https://to-do-list-full-front-end.vercel.app/",
-    projectType: "desktop",
-  },
+ 
 ];

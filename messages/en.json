@@ -75,6 +75,12 @@
       "notHosted": "Not hosted",
       "documentationOnly": "Documentation only"
     },
+    "imob": {
+      "name": "Imob Management",
+      "about": "This project represents the evolution of my work as a developer, bringing together the creation of a complete real estate and contract management system. The application was designed to address real-world needs for managing properties, tenants, and contracts, delivering a practical and efficient experience for both end users and administrators.",
+      "description": "A real estate and contract management system that allows users to subscribe to plans and manage their contracts, properties, and tenants in a centralized way, with support for dynamic documents and file storage.",
+      "techDescription": "The application was built using Vite, React, and TypeScript on the front end, with TanStack Router for routing and TanStack Query for data fetching and caching. The back end and database were fully implemented using Supabase, including file storage. The system includes an administrative panel for managing subscriptions and platform control, as well as a dynamic contract engine that automatically adapts documents based on registered properties and tenants. For PDF generation, a lightweight API using Fastify and Puppeteer was developed, ensuring precise and responsive documents. The initial front-end layout was prototyped with the help of Google AI Studio, and later manually refined and implemented for production. It is hosted on Vercel, actively used by clients, and was developed in approximately 1.5 months using the Scrum methodology."
+    },
     "portfolio2": {
       "name": "Portfolio 2.0",
       "about": "This portfolio represents the evolution of my presence as a front-end developer, showcasing projects, experiences, and skills in a clear, accessible, and visually appealing way. Version 2.0 was designed not only to present my work, but also as a practical exercise in mastering modern web development tools.",
@@ -86,6 +92,12 @@
       "about": "AgendApp is a mobile application focused on scheduling and service availability, connecting clients and providers in a simple, intuitive, and efficient way. Originally started as an academic project, it has evolved into a product with real market potential. The development process sparked my interest in mobile development, motivating me to build a complete solution with a robust backend focused on scalability, security, and maintainability.",
       "description": "AgendApp is a mobile app for service scheduling, connecting clients and providers through an intuitive interface. Started as an academic project, it evolved into a full solution with a robust and scalable backend.",
       "techDescription": "AgendApp was built using React Native and TypeScript on the mobile side, delivering a modern, responsive interface focused on user experience. The backend was developed with Node.js, TypeScript, Prisma ORM, and PostgreSQL, ensuring security, scalability, and clean architecture. It also includes JWT authentication, Google login (OAuth2), password recovery via email, image upload support, and uses Docker to streamline the development environment"
+    },
+    "movie": {
+    "name": "Movie List",
+    "about": "This project was developed during my role as a teaching assistant in a mobile development course, created as a practical example for the class and presented during lectures. Its purpose was to demonstrate the integration of external APIs and modern mobile development concepts using React Native.",
+    "description": "A mobile application that allows users to search for movies, save favorites, and receive personalized recommendations based on their preferences using artificial intelligence.",
+    "techDescription": "The application was built using React Native, TypeScript, and Tailwind CSS for styling. It integrates the Gemini API to generate intelligent recommendations and the OMDb database to fetch movie information. Users can search for movies, mark them as favorites, and request AI-based suggestions based on their preferences. The project was designed with a teaching focus, featuring a simple yet effective interface, making it ideal for demonstrating practical concepts in a classroom environment."
     },
     "storage2": {
       "name": "Storage 2.0",
@@ -99,22 +111,11 @@
       "description": "Storage is a complete web application for inventory and sales management, featuring product registration, sales tracking, and secure access control to protected pages.",
       "techDescription": "For the development of Storage, I used modern tools aligned with industry best practices. On the frontend, I chose React for its flexibility and responsiveness, paired with Tailwind CSS for fast, consistent, and responsive styling. The UI was prototyped in Figma, providing a clear and collaborative design process before implementation. On the backend, I used Node.js with TypeScript for scalability and type safety, and Prisma as the ORM to simplify database communication. I chose PostgreSQL for its reliability and performance, and the entire application was containerized with Docker to streamline environment setup and future deployment."
     },
-    "costs": {
-      "name": "Costs",
-      "about": "COSTS was designed to simplify the financial tracking of projects. With a clean and intuitive interface, users can create projects, log expenses, assign them to specific categories, and monitor how much has been spent at each stage. The platform provides a clear overview of the financial status of each project, empowering teams to make informed decisions and stay within budget. It’s designed to be user-friendly, accessible, and efficient for both beginners and experienced users. This project was also a valuable exercise in working with CRUD operations, state management, and front-end best practices using React.",
-      "description": "COSTS is a simple and effective platform for managing project expenses, helping users stay organized and on budget with clear categorization and insights."
-    },
     "analise": {
       "name": "Data analysis",
       "about": "This project was developed as part of a Rapid Application Development course in Python and focuses on analyzing global data on HIV/AIDS-related deaths. Using datasets from Kaggle, we applied exploratory data analysis techniques with Pandas and created visualizations with Plotly. The final result is an interactive dashboard built with Dash, enabling clear and accessible data visualization for a wide audience. The project aimed to enhance skills in data processing and visualization while delivering an informative, user-friendly interface.",
       "description": "Interactive Python dashboard for global HIV/AIDS death data analysis using Pandas, Plotly, and Dash.",
       "techDescription": "This project was developed using Python as the main programming language, with the support of libraries such as Pandas for data cleaning and manipulation, and Plotly for building interactive and visually engaging charts. The dashboard interface was created using Dash, a powerful framework for rapidly building interactive web applications with Python."
-    },
-    "to-do": {
-      "name": "To-Do-List",
-      "about": "This project was created to strengthen my skills in fullstack development. To-do-list Full offers features such as task categorization, daily task overview, calendar-based organization, and a smooth user experience to boost productivity. Throughout the development process, I tackled challenges like handling dates with TypeScript, integrating libraries such as React Big Calendar, and following clean code and modularization practices. I also deepened my understanding of fullstack integration, consuming REST APIs built with Prisma and Node.js. More than just a task manager, this project represents my technical evolution and commitment to building structured, user-friendly, and scalable solutions.",
-      "description": "To-do-list Full is a complete web application for daily task management. With a modern, responsive, and intuitive interface, it allows users to create, edit, view, and delete tasks with ease, categorize them, and view everything on a built-in calendar.",
-      "techDescription": "On the front end, I used React with TypeScript, applying componentization principles, custom hooks, and state management using useState and useEffect. The UI was styled with Tailwind CSS, and the calendar view was implemented using React Big Calendar. The back end was built with Node.js and Express, using Prisma ORM to interact with a PostgreSQL database. Date manipulation was handled with Date-fns, and the entire project was version-controlled with Git and GitHub."
     }
   },
   "contact": {

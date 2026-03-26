@@ -9,10 +9,8 @@ import {
   SiTypescript,
   SiHtml5,
   SiCss3,
-  SiJavascript,
   SiNodedotjs,
   SiPython,
-  SiMysql,
   SiPostgresql,
   SiSqlite,
   SiGit,
@@ -20,37 +18,64 @@ import {
   SiDocker,
   SiFigma,
   SiReact,
+  SiAmazons3,
+  SiAmazonwebservices,
+  SiFastify,
+  SiGithubactions,
+  SiJira,
+  SiNestjs,
+  SiNotion,
+  SiReactquery,
+  SiSlack,
+  SiSupabase,
+  SiTrello,
+  SiVite,
 } from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
+import { VscOrganization, VscSync, VscVscode } from "react-icons/vsc";
 
 //mapa das tecnologias por topicos usando a tipagem correta
+// Mapa das tecnologias por topicos usando a tipagem correta
 const frontendTechs: TechItemProps[] = [
   { label: "HTML", icon: <SiHtml5 />, color: "orange" },
   { label: "CSS", icon: <SiCss3 />, color: "blue" },
-  { label: "JavaScript", icon: <SiJavascript />, color: "yellow" },
   { label: "TypeScript", icon: <SiTypescript />, color: "blue" },
   { label: "React", icon: <SiReact />, color: "blue" },
   { label: "React Native", icon: <SiReact />, color: "blue2" },
   { label: "Next.js", icon: <SiNextdotjs />, color: "black" },
   { label: "Tailwind", icon: <SiTailwindcss />, color: "cyan" },
+  { label: "Vite", icon: <SiVite />, color: "purple" },
+  { label: "TanStack", icon: <SiReactquery />, color: "red" },
 ];
+
 const backendTechs: TechItemProps[] = [
-  { label: "JavaScript", icon: <SiJavascript />, color: "yellow" },
   { label: "TypeScript", icon: <SiTypescript />, color: "blue" },
-  { label: "NodeJs", icon: <SiNodedotjs />, color: "green" },
+  { label: "Node.js", icon: <SiNodedotjs />, color: "green" },
+  { label: "NestJS", icon: <SiNestjs />, color: "red" },
+  { label: "Fastify", icon: <SiFastify />, color: "black" },
   { label: "Python", icon: <SiPython />, color: "yellow" },
-  { label: "MySQL", icon: <SiMysql />, color: "blue" },
-  { label: "Postgresql", icon: <SiPostgresql />, color: "blue" },
-  { label: "SQlite", icon: <SiSqlite />, color: "black" },
+  { label: "PostgreSQL", icon: <SiPostgresql />, color: "blue" },
+  { label: "SQLite", icon: <SiSqlite />, color: "blue2" },
+  { label: "Supabase", icon: <SiSupabase />, color: "green" },
 ];
+
 const devopsTechs: TechItemProps[] = [
   { label: "Git", icon: <SiGit />, color: "orange" },
   { label: "GitHub", icon: <SiGithub />, color: "black" },
   { label: "Docker", icon: <SiDocker />, color: "blue" },
+  { label: "AWS ECR", icon: <SiAmazonwebservices />, color: "orange" },
+  { label: "AWS S3", icon: <SiAmazons3 />, color: "green" },
+  { label: "CI/CD", icon: <SiGithubactions />, color: "blue" },
 ];
+
 const devTechs: TechItemProps[] = [
-  { label: "VScode", icon: <VscVscode />, color: "blue" },
+  { label: "VSCode", icon: <VscVscode />, color: "blue" },
   { label: "Figma", icon: <SiFigma />, color: "pink" },
+  { label: "Slack", icon: <SiSlack />, color: "purple" },
+  { label: "Jira", icon: <SiJira />, color: "blue" },
+  { label: "Trello", icon: <SiTrello />, color: "blue" },
+  { label: "Notion", icon: <SiNotion />, color: "black" },
+  { label: "Agile", icon: <VscSync />, color: "blue2" },
+  { label: "Scrum", icon: <VscOrganization />, color: "cyan" },
 ];
 
 export default function Section3() {

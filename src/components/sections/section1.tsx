@@ -2,21 +2,30 @@
 
 import { ArrowDown, ArrowRight, Github, Linkedin } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { MdOutlineDownloading } from "react-icons/md";
+import { ContactIconWithTooltip } from "../contato/ContactIconWithTooltip";
 import Image from "next/image";
 
 export default function Section1() {
-  const t = useTranslations("Home");
+  const tHome = useTranslations("Home");
+  const tContact = useTranslations("contact");
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
+  const locale = useLocale();
+
+  const hrefCurriculo =
+    locale === "pt"
+      ? "/curriculos/Curriculo_Alysson_Rafael_pt_BR.pdf"
+      : "/curriculos/Resume_Alysson_Rafael_en.pdf";
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const roles = [
-    t("roles.webDeveloper"),
-    t("roles.fullStackDeveloper"),
-    t("roles.mobileDeveloper"),
-    t("roles.amateurDesigner"),
+    tHome("roles.webDeveloper"),
+    tHome("roles.fullStackDeveloper"),
+    tHome("roles.mobileDeveloper"),
+    tHome("roles.amateurDesigner"),
   ];
 
   // efeito que simula a digitação do texto
@@ -53,12 +62,12 @@ export default function Section1() {
         {/* Título com typewriter effect */}
         <div className="">
           <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-            {t("greeting")} <br />
+            {tHome("greeting")} <br />
             <span className="text-primary text-2xl md:text-3xl">{text}</span>
             <span className="animate-pulse">|</span>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl mt-4 lg:max-w-2xl">
-            {t("tagline")}
+            {tHome("tagline")}
           </p>
         </div>
 
@@ -71,16 +80,16 @@ export default function Section1() {
         {/* Seção "My Work" */}
         <div className="space-y-4 max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-semibold">
-            {t("work.title")}
+            {tHome("work.title")}
           </h2>
           <p className="text-lg text-muted-foreground">
-            {t("work.description")}
+            {tHome("work.description")}
           </p>
           <a
             href="#projects"
             className="inline-flex items-center text-lg text-primary hover:underline gap-2 hover:lg:text-text-contrast transition-colors duration-600"
           >
-            {t("work.link")}
+            {tHome("work.link")}
             <ArrowRight className="w-5 h-5 lg:flex hidden" />
             <ArrowDown className="w-5 h-5 flex lg:hidden" />
           </a>
@@ -104,6 +113,12 @@ export default function Section1() {
           >
             <Linkedin className="w-6 h-6" />
           </a>
+          <ContactIconWithTooltip
+            href={hrefCurriculo}
+            label={tContact("toolTips.curriculum")}
+            icon={<MdOutlineDownloading />}
+            download={true}
+          />
         </div>
 
         {/* Botão para descer */}

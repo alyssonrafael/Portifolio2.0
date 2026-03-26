@@ -68,7 +68,7 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} className="bg-bg-primary dark:bg-bg-dark">
+    <html lang={locale} className="bg-bg-primary dark:bg-bg-dark" data-scroll-behavior="smooth">
       <body
         className={`${roboto.variable} antialiased bg-white dark:bg-gray-900`}
       >

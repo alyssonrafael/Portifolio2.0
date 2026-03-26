@@ -10,8 +10,8 @@ export default function Section5() {
 
   const hrefCurriculo =
     locale === "pt"
-      ? "/curriculos/curriculo-alysson-rafael-pt.pdf"
-      : "/curriculos/curriculo-alysson-rafael-en.pdf";
+      ? "/curriculos/Curriculo_Alysson_Rafael_pt_BR.pdf"
+      : "/curriculos/Resume_Alysson_Rafael_en.pdf";
 
   return (
     <section

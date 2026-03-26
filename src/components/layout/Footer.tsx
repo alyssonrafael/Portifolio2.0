@@ -1,10 +1,16 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { MdOutlineDownloading } from "react-icons/md";
 import { ContactIconWithTooltip } from "../contato/ContactIconWithTooltip";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const locale = useLocale();
+  
+  const hrefCurriculo =
+    locale === "pt"
+      ? "/curriculos/Curiculo_Alysson_Rafael_pt_BR.pdf"
+      : "/curriculos/Resume_Alysson_Rafael_en.pdf"
 
   return (
     <footer className="mt-20 border-t border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-900/50">
@@ -62,7 +68,7 @@ export function Footer() {
               icon={<SiLinkedin />}
             />
             <ContactIconWithTooltip
-              href="/curriculos/curriculo-alysson-rafael-pt.pdf"
+              href={hrefCurriculo}
               icon={<MdOutlineDownloading />}
               download={true}
             />
